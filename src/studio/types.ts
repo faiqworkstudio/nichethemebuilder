@@ -14,6 +14,10 @@ export type DemoEntry = {
   routes: { th?: string; en: string };
   /** A few swatches from the demo's own palette, shown on the showcase. */
   palette: string[];
+  /** Short handwritten-style tip telling a visitor what to try first. */
+  tryThis: string;
+  /** Broad group used by the showcase filter. */
+  sector: "Home & property" | "Health & beauty" | "Hospitality" | "Food & drink" | "Professional" | "Lifestyle";
   status: "In progress" | "Review" | "Complete";
 };
 

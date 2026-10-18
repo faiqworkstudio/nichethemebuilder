@@ -1,3 +1,4 @@
+import { maliShowcase } from "@/demos/mali-clinic/showcase";
 import { senShowcase } from "@/demos/sen-studio/showcase";
 import type { DemoEntry } from "./types";
 
@@ -5,4 +6,4 @@ import type { DemoEntry } from "./types";
  * Every demo registers itself here — one import per demo folder. Order is the
  * order shown on the showcase page.
  */
-export const demos: DemoEntry[] = [senShowcase];
+export const demos: DemoEntry[] = [senShowcase, maliShowcase];

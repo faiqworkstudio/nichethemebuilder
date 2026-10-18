@@ -1,0 +1,124 @@
+/*
+ * Mali Skin Clinic (Demo 02) — Soft Contemporary theme tokens.
+ * Milk, sage and a little clay; rounded but not bubbly. Scoped to body.mali.
+ */
+.mali {
+  --milk: #f8f4ee;
+  --cream: #efe7dc;
+  --sage-soft: #e3e8df;
+  --sage: #8b9c86;
+  --forest: #344a3c;
+  --forest-hover: #263a2d;
+  --ink: #262624;
+  --ink-2: #4e4d49;
+  --muted: #67655f;
+  --clay: #a3573f;
+  --line: #ddd5c8;
+  --danger: #a3241b;
+  --radius-lg: 32px;
+  --radius: 18px;
+
+  --font-display: var(--font-mali-display), "Noto Serif Thai", Georgia, serif;
+  --font-body: var(--font-mali-body), "Noto Sans Thai", system-ui, sans-serif;
+
+  --gutter: clamp(1.1rem, 4vw, 3rem);
+  --maxw: 1280px;
+  --space: clamp(4.5rem, 9vw, 8rem);
+
+  margin: 0;
+  background: var(--milk);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mali:lang(th) {
+  line-height: 1.8;
+}
+
+:where(.mali) *,
+:where(.mali) *::before,
+:where(.mali) *::after {
+  box-sizing: border-box;
+}
+
+:where(.mali) :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure) {
+  margin: 0;
+}
+
+:where(.mali) :where(ul, ol) {
+  padding: 0;
+  list-style: none;
+}
+
+:where(.mali) :where(img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:where(.mali) :where(a) {
+  color: inherit;
+}
+
+:where(.mali) :where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+
+.mali :focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.mali-wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.mali .visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.mali-skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: var(--forest);
+  color: #fff;
+}
+
+.mali-skip:focus {
+  top: 0.6rem;
+}
+
+html:has(body.mali) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.mali) {
+    scroll-behavior: auto;
+  }
+
+  .mali *,
+  .mali *::before,
+  .mali *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

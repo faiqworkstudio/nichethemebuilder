@@ -2,6 +2,8 @@
  * Pure enquiry + budget logic for Sen Studio, kept free of React so it can be
  * unit-tested and reused if a real backend is connected later.
  */
+import { isEmail, isLineId, normaliseThaiPhone } from "@/lib/contact";
+import { formatTHB } from "@/lib/format";
 import type { Locale } from "@/lib/i18n";
 import { budgetBands, form, plannerRates, type PlannerScope, type PlannerType } from "./content";
 import type { BudgetBand } from "./projects";
@@ -47,15 +49,7 @@ export const emptyEnquiry = (replyLang: Locale): EnquiryValues => ({
   consent: false,
 });
 
-const LINE_ID = /^[a-z0-9._-]{4,20}$/i;
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-/** Accepts Thai numbers like 081 234 5678, 02-123-4567 or +66 81 234 5678. */
-export function normaliseThaiPhone(raw: string): string | null {
-  let digits = raw.replace(/[\s().-]/g, "");
-  if (digits.startsWith("+66")) digits = "0" + digits.slice(3);
-  return /^0\d{8,9}$/.test(digits) ? digits : null;
-}
+export { formatTHB, normaliseThaiPhone };
 
 /** Field order matters: the error summary lists errors in form order. */
 export function validateEnquiry(v: EnquiryValues, lang: Locale): EnquiryErrors {
@@ -73,9 +67,9 @@ export function validateEnquiry(v: EnquiryValues, lang: Locale): EnquiryErrors {
   if (v.details.length > DETAILS_MAX) e.details = msg.details[lang];
   if (v.name.trim().length < 1) e.name = msg.name[lang];
   if (!v.method) e.method = msg.method[lang];
-  if (v.method === "line" && !LINE_ID.test(v.lineId.trim().replace(/^@/, ""))) e.lineId = msg.lineId[lang];
+  if (v.method === "line" && !isLineId(v.lineId)) e.lineId = msg.lineId[lang];
   if (v.method === "phone" && !normaliseThaiPhone(v.phone)) e.phone = msg.phone[lang];
-  if (v.method === "email" && !EMAIL.test(v.email.trim())) e.email = msg.email[lang];
+  if (v.method === "email" && !isEmail(v.email)) e.email = msg.email[lang];
   if (!v.consent) e.consent = msg.consent[lang];
 
   return e;
@@ -152,11 +146,3 @@ export function bandFor(amount: number): BudgetBand {
 
 /** Planner space types map directly onto enquiry project types. */
 export const plannerToEnquiryType = (t: PlannerType): EnquiryType => t;
-
-export const formatTHB = (n: number, lang: Locale) =>
-  new Intl.NumberFormat(lang === "th" ? "th-TH" : "en-GB", {
-    style: "currency",
-    currency: "THB",
-    currencyDisplay: "narrowSymbol",
-    maximumFractionDigits: 0,
-  }).format(n);
