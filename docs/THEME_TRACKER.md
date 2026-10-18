@@ -4,7 +4,7 @@
 
 | Demo ID | Industry | Primary theme | Secondary influence | Layout signature | Status | Last updated | Notes |
 |---|---|---|---|---|---|---|---|
-| D01 | Interior design / renovation | Architectural Portfolio | Portfolio-to-Quote | Asymmetric project index, large project imagery, detailed enquiry | NOT STARTED | — | First priority |
+| D01 | Interior design / renovation (Sen Studio) | Architectural Portfolio | Portfolio-to-Quote | Sheet-numbered ruled sections, title block, hover-preview project index, budget planner → enquiry | REVIEW | 2026-10-18 | Built. Plaster/ink/laterite, IBM Plex Sans Thai + Plex Mono, no cards/radius/shadows. Brief: `docs/demos/D01_SEN_STUDIO.md` |
 | D02 | Beauty / aesthetic clinic | Soft Contemporary | Consultation First | Treatment-led navigation, calm editorial sections | NOT STARTED | — | Avoid unsupported medical claims |
 | D03 | Boutique hotel / serviced apartment | Contemporary Boutique Hotel | Neighborhood Journal | Immersive room imagery, location editorial, booking handoff | NOT STARTED | — | No fake booking success |
 | D04 | Dental clinic | Humanist Professional | Treatment Library | Expertise-first service pages and FAQs | BACKLOG | — | Verify regulated claims |
@@ -29,3 +29,10 @@
 ## Change log
 
 Append dated entries when a theme is reserved, changed, completed, or retired.
+
+### Reserved visual vocabulary (do not reuse in later demos)
+- **D01:** sheet-code section strips (A-01…), dimension lines, title-block fact row, ruled "schedule" tables, plaster `#f3f0ea` + ink + laterite `#9a4426` palette, IBM Plex Sans Thai light display type, square-cornered controls.
+- **Klickdoe shell:** navy / blue / light-blue, Poppins + Inter, rounded cards with soft shadow — reserved for the studio's own pages.
+
+### 2026-10-18
+- D01 reserved as `IN PROGRESS` (Architectural Portfolio + Portfolio-to-Quote) before coding; moved to `REVIEW` after build and checks. Not `COMPLETE` until native Thai proofread and real-device check.

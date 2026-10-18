@@ -37,32 +37,32 @@
   text-rendering: optimizeLegibility;
 }
 
-.sen *,
-.sen *::before,
-.sen *::after {
+:where(.sen) *,
+:where(.sen) *::before,
+:where(.sen) *::after {
   box-sizing: border-box;
 }
 
-.sen :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote) {
+:where(.sen) :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure, blockquote) {
   margin: 0;
 }
 
-.sen :where(ul, ol) {
+:where(.sen) :where(ul, ol) {
   padding: 0;
   list-style: none;
 }
 
-.sen img {
+:where(.sen) :where(img) {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.sen a {
+:where(.sen) :where(a) {
   color: inherit;
 }
 
-.sen :where(button, input, select, textarea) {
+:where(.sen) :where(button, input, select, textarea) {
   font: inherit;
   color: inherit;
 }

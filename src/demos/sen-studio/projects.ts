@@ -41,6 +41,8 @@ export type Project = {
   approach: L<string[]>;
   materials: L<string[]>;
   images: ProjectImage[];
+  /** Which image the project index previews (defaults to the first). */
+  indexImage?: number;
 };
 
 export type BudgetBand = "u500k" | "500k-1m" | "1m-2m" | "2m-4m" | "o4m" | "unsure";
@@ -71,6 +73,8 @@ export const projects: Project[] = [
     area: 180,
     weeks: 14,
     budget: "2m-4m",
+    // The hero already shows the bedroom, so the index previews the stair-void room.
+    indexImage: 1,
     scope: {
       th: ["ฉนวนหลังคาและฝ้าระบายอากาศ", "เปลี่ยนหน้าต่างทิศตะวันตก", "แผงบังแดดอะลูมิเนียมเจาะรู", "ห้องนอนใหญ่และห้องน้ำ", "เปิดช่องบันได"],
       en: ["Roof insulation and ventilated ceiling", "New west-facing windows", "Perforated aluminium sun screen", "Main bedroom and bathroom", "Opened stair void"],
@@ -395,3 +399,5 @@ export const projects: Project[] = [
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
+
+export const indexImage = (p: Project) => p.images[p.indexImage ?? 0];

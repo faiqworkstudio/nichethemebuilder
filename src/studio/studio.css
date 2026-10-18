@@ -188,7 +188,7 @@
 
 .kd-demo {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3.5rem);
   padding: clamp(1.25rem, 3.5vw, 3rem);
   background: var(--surface);
@@ -235,12 +235,12 @@
   margin-top: 0.3rem;
 }
 
-.kd-demo-info > p {
+.kd-demo-intro > p {
   color: var(--navy-2);
+  max-width: 34em;
 }
 
 .kd-facts {
-  margin-top: 1.5rem;
   border-top: 1px solid var(--line);
 }
 
@@ -329,10 +329,12 @@
 }
 
 /* ---------- Device stage ---------- */
+/* Desktop screenshot leads; iPad and phone overlap its lower right edge. */
 .kd-stage {
+  grid-column: 1 / -1;
   position: relative;
-  align-self: center;
-  padding: 0 4% 18% 0;
+  padding: 0 14% 9% 0;
+  margin-bottom: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .kd-device {
@@ -377,7 +379,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 34%;
+  width: 27%;
   border: 7px solid #1b2333;
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -385,9 +387,9 @@
 
 .kd-mobile {
   position: absolute;
-  right: 31%;
-  bottom: -2%;
-  width: 17%;
+  right: 24%;
+  bottom: -3%;
+  width: 13%;
   border: 5px solid #1b2333;
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -464,14 +466,26 @@
   outline-color: #fff;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 860px) {
   .kd-demo {
     grid-template-columns: 1fr;
   }
 
   .kd-stage {
-    order: -1;
+    padding: 0 10% 14% 0;
   }
+
+  .kd-tablet {
+    width: 34%;
+  }
+
+  .kd-mobile {
+    right: 28%;
+    width: 18%;
+  }
+}
+
+@media (max-width: 960px) {
 
   .kd-approach ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));

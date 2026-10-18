@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Locale } from "@/lib/i18n";
 import { sections } from "../content";
-import { projects, projectTypeLabel, type ProjectType } from "../projects";
+import { indexImage, projects, projectTypeLabel, type ProjectType } from "../projects";
 import { projectPath } from "../paths";
 import { SectionHead } from "./SectionHead";
 import styles from "./ProjectIndex.module.css";
@@ -72,7 +72,7 @@ export function ProjectIndex({ lang }: { lang: Locale }) {
                     onFocus={() => setActiveSlug(p.slug)}
                   >
                     <span className={styles.thumb}>
-                      <Image src={p.images[0].src} alt="" fill sizes="96px" style={{ objectFit: "cover" }} />
+                      <Image src={indexImage(p).src} alt="" fill sizes="96px" style={{ objectFit: "cover" }} />
                     </span>
                     <span className={`sen-mono ${styles.code}`}>{p.code}</span>
                     <span className={styles.rowMain}>
@@ -98,7 +98,7 @@ export function ProjectIndex({ lang }: { lang: Locale }) {
               {projects.map((p) => (
                 <Image
                   key={p.slug}
-                  src={p.images[0].src}
+                  src={indexImage(p).src}
                   alt=""
                   fill
                   sizes="(max-width: 960px) 1px, 40vw"
@@ -113,7 +113,7 @@ export function ProjectIndex({ lang }: { lang: Locale }) {
               <span className="sen-mono">
                 {active.code} · {active.location[lang]}
               </span>
-              <span>{active.images[0].caption[lang]}</span>
+              <span>{indexImage(active).caption[lang]}</span>
             </figcaption>
           </figure>
         </div>

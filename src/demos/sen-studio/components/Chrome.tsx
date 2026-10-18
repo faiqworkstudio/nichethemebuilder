@@ -108,7 +108,10 @@ export function SiteFooter({ lang }: { lang: Locale }) {
           <p>
             {footer.builtBy[lang]} <strong>{studio.name}</strong>
           </p>
-          <Link href="/">{footer.backToPortfolio[lang]}</Link>
+          {/* Different root layout: skip prefetching the shell's fonts and styles. */}
+          <Link href="/" prefetch={false}>
+            {footer.backToPortfolio[lang]}
+          </Link>
         </div>
       </div>
     </footer>

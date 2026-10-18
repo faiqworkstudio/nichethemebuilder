@@ -11,7 +11,7 @@ function Shot({ demo, device, priority }: { demo: DemoEntry; device: Device; pri
       alt={`${demo.name} homepage on ${size.label.split(" ·")[0].toLowerCase()}`}
       width={size.width}
       height={size.height}
-      sizes={device === "desktop" ? "(max-width: 900px) 92vw, 760px" : device === "tablet" ? "260px" : "150px"}
+      sizes={device === "desktop" ? "(max-width: 900px) 92vw, 900px" : device === "tablet" ? "(max-width: 900px) 30vw, 340px" : "(max-width: 900px) 18vw, 180px"}
       priority={priority}
     />
   );
@@ -22,7 +22,25 @@ export function DemoShowcase({ demo, index }: { demo: DemoEntry; index: number }
   const primary = demo.routes.th ?? demo.routes.en;
   return (
     <article className="kd-demo" aria-labelledby={`${demo.slug}-title`}>
-      <div className="kd-demo-info">
+      <div className="kd-stage">
+        <figure className="kd-device kd-desktop">
+          <div className="kd-browser-bar" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <em>{primary}</em>
+          </div>
+          <Shot demo={demo} device="desktop" priority={index === 0} />
+        </figure>
+        <figure className="kd-device kd-tablet">
+          <Shot demo={demo} device="tablet" />
+        </figure>
+        <figure className="kd-device kd-mobile">
+          <Shot demo={demo} device="mobile" />
+        </figure>
+      </div>
+
+      <div className="kd-demo-intro">
         <p className="kd-demo-id">
           {demo.id} · {demo.industry}
           <span className="kd-status">{demo.status}</span>
@@ -36,6 +54,19 @@ export function DemoShowcase({ demo, index }: { demo: DemoEntry; index: number }
           ) : null}
         </h3>
         <p>{demo.summary}</p>
+        <div className="kd-actions">
+          <a className="kd-button" href={primary}>
+            Open demo{demo.routes.th ? " (ไทย)" : ""}
+          </a>
+          {demo.routes.th ? (
+            <a className="kd-button kd-button-ghost" href={demo.routes.en}>
+              English version
+            </a>
+          ) : null}
+        </div>
+      </div>
+
+      <div className="kd-demo-detail">
         <dl className="kd-facts">
           <div>
             <dt>For</dt>
@@ -55,39 +86,11 @@ export function DemoShowcase({ demo, index }: { demo: DemoEntry; index: number }
             <li key={f}>{f}</li>
           ))}
         </ul>
-        <div className="kd-palette" aria-label="Palette">
+        <div className="kd-palette" role="img" aria-label={`Palette: ${demo.palette.join(", ")}`}>
           {demo.palette.map((c) => (
             <span key={c} style={{ background: c }} title={c} />
           ))}
         </div>
-        <div className="kd-actions">
-          <a className="kd-button" href={primary}>
-            Open demo{demo.routes.th ? " (ไทย)" : ""}
-          </a>
-          {demo.routes.th ? (
-            <a className="kd-button kd-button-ghost" href={demo.routes.en}>
-              English version
-            </a>
-          ) : null}
-        </div>
-      </div>
-
-      <div className="kd-stage">
-        <figure className="kd-device kd-desktop">
-          <div className="kd-browser-bar" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <em>{primary}</em>
-          </div>
-          <Shot demo={demo} device="desktop" priority={index === 0} />
-        </figure>
-        <figure className="kd-device kd-tablet">
-          <Shot demo={demo} device="tablet" />
-        </figure>
-        <figure className="kd-device kd-mobile">
-          <Shot demo={demo} device="mobile" />
-        </figure>
       </div>
 
       <ul className="kd-shot-links" aria-label={`${demo.name} full-size screenshots`}>

@@ -13,20 +13,21 @@ Build complete, convincing demos one at a time. Prefer quality and distinction o
 - `RETIRED` — removed from active portfolio, with reason recorded.
 
 ## Milestones
-### M0 — Repository and tracking setup
-- [ ] Inspect repository and current framework.
-- [ ] Establish project scripts and baseline checks.
-- [ ] Create session log, design decisions and known issues.
-- [ ] Identify how demos are routed and previewed.
+### M0 — Repository and tracking setup — DONE 2026-10-18
+- [x] Inspect repository and current framework (repository was empty; Next.js chosen — see DESIGN_DECISIONS).
+- [x] Establish project scripts and baseline checks (`npm run check`, `smoke`, `screenshots`).
+- [x] Create session log, design decisions and known issues.
+- [x] Identify how demos are routed and previewed (`/demos/<slug>/<lang>`, showcase at `/`).
+- [x] Klickdoe showcase page with automated desktop / iPad / mobile screenshots.
 
-### M1 — Demo 01: Interior design / renovation
-- [ ] Write art-direction brief.
-- [ ] Reserve theme in tracker.
-- [ ] Build complete Thai-English site.
-- [ ] Implement functional enquiry form or explicit demo mode.
-- [ ] Test responsive layouts, links, language switcher and SEO.
-- [ ] Run checks and review actual rendered page.
-- [ ] Mark complete only when quality gates pass.
+### M1 — Demo 01: Interior design / renovation — REVIEW
+- [x] Write art-direction brief (`docs/demos/D01_SEN_STUDIO.md`).
+- [x] Reserve theme in tracker.
+- [x] Build complete Thai-English site (home + 5 project pages per language).
+- [x] Implement functional enquiry form with explicit demo mode (and optional real endpoint).
+- [x] Test responsive layouts, links, language switcher and SEO.
+- [x] Run checks and review actual rendered page.
+- [ ] Native Thai proofread + real-device check → then mark COMPLETE.
 
 ### M2 — Demo 02: Beauty / aesthetic clinic
 - [ ] Use a materially different primary theme and layout.
@@ -54,3 +55,6 @@ For each demo, record:
 - Quality checks run:
 - Known limitations:
 - Status:
+
+## Acceptance records
+- D01 Sen Studio — see `docs/demos/D01_SEN_STUDIO.md` (status: REVIEW).

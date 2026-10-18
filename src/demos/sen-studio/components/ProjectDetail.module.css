@@ -293,3 +293,18 @@
     padding-inline: var(--gutter);
   }
 }
+
+/* A portrait lead image in the gallery takes a narrower column so it doesn't dominate. */
+@media (min-width: 641px) {
+  .gallery figure:nth-child(1):has([data-portrait]) {
+    grid-column: 1 / span 5;
+  }
+
+  .gallery figure:nth-child(1):has([data-portrait]) + figure {
+    grid-column: 7 / span 6;
+  }
+
+  .gallery figure:nth-child(1):has([data-portrait]) + figure:has([data-portrait]) {
+    grid-column: 8 / span 5;
+  }
+}
