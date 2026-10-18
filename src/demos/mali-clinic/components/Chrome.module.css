@@ -45,6 +45,7 @@
 
 .brandName {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 500;
@@ -158,7 +159,14 @@
   }
 
   .nav ul {
+    width: auto;
     margin-inline: 0;
+    justify-content: flex-start;
+    border-radius: 999px;
+  }
+
+  .nav li {
+    flex: none;
   }
 }
 
@@ -167,13 +175,9 @@
     display: none;
   }
 
+  /* The hero's booking button sits right below on small phones. */
   .cta {
-    padding: 0 0.95rem;
-    font-size: 0.875rem;
-  }
-
-  .actions {
-    gap: 0.5rem;
+    display: none;
   }
 }
 

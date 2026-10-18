@@ -11,7 +11,7 @@
     "screenshots": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/capture-showcase.mjs",
     "check": "npm run typecheck && npm run lint && npm run test",
     "test": "tsx --test tests/*.test.ts",
-    "smoke": "node scripts/smoke-sen-studio.mjs"
+    "smoke": "for f in scripts/smoke-*.mjs; do node \"$f\" || exit 1; done"
   },
   "dependencies": {
     "next": "^16.4.2",
