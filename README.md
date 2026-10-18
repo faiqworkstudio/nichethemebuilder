@@ -13,6 +13,7 @@ interactions. `CLAUDE.md` is the source of truth for how demos are designed and 
 | `/demos/mali-clinic/th` · `/en` | **D02 Mali Skin Clinic** — skin & aesthetic clinic (Soft Contemporary) |
 | `/demos/soi-nine/th` · `/en` | **D03 Soi Nine House** — boutique hotel / serviced apartment (Boutique Hotel + Neighbourhood Journal) |
 | `/demos/yim-dental/th` · `/en` | **D04 Yim Dental Clinic** — dental clinic (Humanist Professional + Treatment Library) |
+| `/demos/thara-spa/th` · `/en` | **D05 Thara Thai Massage & Spa** — massage & spa (Warm Minimal + Booking First) |
 
 ## Stack
 
@@ -53,6 +54,7 @@ src/
     mali-clinic/               # D02 — same shape as below
     soi-nine/                  # D03 — same shape as below
     yim-dental/                # D04 — same shape as below
+    thara-spa/                 # D05 — same shape as below
     sen-studio/                # ← everything that belongs to D01
       config.ts                #   business name, contact/LINE, enquiry endpoint (one place)
       content.ts               #   all copy, Thai + English side by side
@@ -65,7 +67,7 @@ src/
   studio/                      # showcase components, demo registry, shared types
   components/LocaleSwitch.tsx  # TH/EN switcher shared by all demos (styled per demo)
   config/studio.ts             # Klickdoe label + contact details (null until real)
-  lib/                         # i18n, contact validation, ฿ formatting, bilingual metadata
+  lib/                         # i18n, contact validation, dates, ฿ formatting, bilingual metadata
 tests/                         # unit tests per demo
 scripts/                       # screenshot capture + smoke tests
 docs/                          # trackers, design system, decisions, per-demo briefs
@@ -104,7 +106,7 @@ Copy `.env.example` to `.env.local`:
 
 - `NEXT_PUBLIC_SITE_URL` — public base URL for canonical and social metadata.
 - `NEXT_PUBLIC_SEN_ENQUIRY_ENDPOINT`, `NEXT_PUBLIC_MALI_CONSULT_ENDPOINT`, `NEXT_PUBLIC_SOI_REQUEST_ENDPOINT`,
-  `NEXT_PUBLIC_YIM_APPOINTMENT_ENDPOINT` —
+  `NEXT_PUBLIC_YIM_APPOINTMENT_ENDPOINT`, `NEXT_PUBLIC_THARA_BOOKING_ENDPOINT` —
   when set, that demo's form POSTs JSON there; when empty the form runs in a clearly labelled preview mode and
   sends nothing.
 

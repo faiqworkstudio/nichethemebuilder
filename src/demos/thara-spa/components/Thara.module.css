@@ -1,0 +1,726 @@
+/* ---------- Notice + header ---------- */
+.notice {
+  margin: 0;
+  padding: 0.5rem var(--gutter);
+  background: var(--cream-2);
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.notice span {
+  margin-right: 0.35rem;
+  font-weight: 600;
+  color: var(--turmeric-ink);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.mark {
+  align-self: center;
+  width: 2.2rem;
+  height: 1.3rem;
+  color: var(--olive);
+}
+
+.brandLatin {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.brandThai {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  padding-block: 0.35rem;
+  border-bottom: 1px solid transparent;
+}
+
+.nav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--turmeric);
+}
+
+.lang {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.langCurrent {
+  font-weight: 600;
+  border-bottom: 2px solid var(--turmeric);
+}
+
+.langLink {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.langLink:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav ul {
+    justify-content: flex-start;
+    white-space: nowrap;
+  }
+}
+
+/* ---------- Shared ---------- */
+.section {
+  padding-top: var(--space);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+}
+
+.h2:lang(th) {
+  line-height: 1.4;
+}
+
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.2rem;
+  padding: 0 1.5rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--olive);
+  color: var(--olive-ink);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primary:hover {
+  background: var(--olive-hover);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: stretch;
+  padding-top: clamp(0.5rem, 2vw, 1.5rem);
+  scroll-margin-top: 1rem;
+}
+
+.heroImage {
+  position: relative;
+  min-height: 36rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.heroSide {
+  display: flex;
+  flex-direction: column;
+  padding-block: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.kicker {
+  font-size: 0.875rem;
+  color: var(--turmeric-ink);
+  letter-spacing: 0.04em;
+}
+
+.heroSide h1 {
+  margin-top: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(3rem, 6.5vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.heroSide h1:lang(th) {
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+}
+
+.sub {
+  margin-top: 1rem;
+  max-width: 28em;
+  color: var(--ink-2);
+}
+
+/* Booking ticket */
+.ticket {
+  margin-top: 1.75rem;
+  padding: 1.4rem 1.4rem 1.2rem;
+  border-radius: 6px;
+  background: #fbf7ef;
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 1rem;
+}
+
+.ticketTitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.ticketField {
+  display: grid;
+  gap: 0.35rem;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.ticketField label,
+.ticketField legend,
+.ticketField > span {
+  padding: 0;
+  margin-bottom: 0.1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ticketField label:lang(th),
+.ticketField legend:lang(th),
+.ticketField > span:lang(th) {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+}
+
+.ticketField select,
+.ticketField input {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.9rem;
+  padding: 0 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.ticketRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.lengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.length {
+  position: relative;
+  cursor: pointer;
+}
+
+.length input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.length span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  font-size: 0.9375rem;
+}
+
+.length input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.length input:focus-visible + span {
+  outline: 2px solid var(--turmeric-ink);
+  outline-offset: 2px;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: max-content;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--cream);
+}
+
+.stepper button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.stepper button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepper output {
+  min-width: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ticketTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--line);
+}
+
+.ticketTotal strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.ticketNote {
+  margin-top: -0.6rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroImage {
+    order: 2;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ---------- Menu board ---------- */
+.menuBand {
+  margin-top: var(--space);
+  padding-block: var(--space);
+  background: var(--olive);
+  color: var(--olive-ink);
+}
+
+.menuBand :focus-visible {
+  outline-color: var(--turmeric);
+}
+
+.menuHead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem 3rem;
+  align-items: end;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(243, 237, 217, 0.3);
+}
+
+.menuHead p {
+  color: #ddd6be;
+  max-width: 32em;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem clamp(2rem, 6vw, 5rem);
+}
+
+.boardItem h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.boardItem h3 span {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: #c9c2a6;
+}
+
+.boardItem > p {
+  margin-top: 0.5rem;
+  color: #e4ddc6;
+  font-size: 0.9375rem;
+}
+
+.boardItem .wear {
+  margin-top: 0.3rem;
+  font-size: 0.8125rem;
+  color: #c9c2a6;
+  font-style: italic;
+}
+
+.prices {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.9rem;
+}
+
+.prices li {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.leader {
+  border-bottom: 2px dotted rgba(243, 237, 217, 0.4);
+  transform: translateY(0.25rem);
+}
+
+.prices button {
+  min-height: 2.2rem;
+  padding: 0 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(243, 237, 217, 0.5);
+  background: transparent;
+  color: var(--olive-ink);
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.prices button:hover {
+  background: var(--olive-ink);
+  color: var(--olive);
+}
+
+.menuNote {
+  margin-top: 2.5rem;
+  font-size: 0.8125rem;
+  color: #c9c2a6;
+}
+
+@media (max-width: 860px) {
+  .menuHead,
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Visit steps ---------- */
+.visitSteps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: 2.5rem;
+}
+
+.visitSteps li:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.visitImage {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.stepNo {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--turmeric-ink);
+}
+
+.visitSteps h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  margin-block: 0.15rem 0.35rem;
+}
+
+.visitSteps li > p:last-child {
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 760px) {
+  .visitSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .visitSteps li:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .visitImage {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ---------- Good to know ---------- */
+.know {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.knowImage {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.knowList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.knowList dt {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.knowList dd {
+  margin-top: 0.35rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 860px) {
+  .know {
+    grid-template-columns: 1fr;
+  }
+
+  .knowImage {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 560px) {
+  .knowList {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- FAQ + find us ---------- */
+.faqGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.faqList {
+  margin-top: 1.5rem;
+}
+
+.faqList details {
+  border-top: 1px solid var(--line);
+}
+
+.faqList details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faqList summary {
+  padding-block: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.faqList summary::marker {
+  color: var(--turmeric);
+}
+
+.faqList p {
+  padding-bottom: 1.1rem;
+  color: var(--ink-2);
+}
+
+.find {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+  color: var(--ink-2);
+}
+
+.find .h3 {
+  color: var(--ink);
+}
+
+.findImage {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  max-width: 16rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+@media (max-width: 860px) {
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .findImage {
+    display: none;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: var(--space);
+  padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
+  background: var(--ink);
+  color: #e7dccb;
+  font-size: 0.9375rem;
+}
+
+.footer :focus-visible {
+  outline-color: var(--turmeric);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.footerMark {
+  width: 2.4rem;
+  height: 1.5rem;
+  color: var(--turmeric);
+}
+
+.footerName {
+  margin-block: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.footerSmall {
+  font-size: 0.875rem;
+  color: #b9ab98;
+}
+
+.footerContact li {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid rgba(231, 220, 203, 0.15);
+}
+
+.footerContact span,
+.footerContact em {
+  color: #b9ab98;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+.footerStudio {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(231, 220, 203, 0.15);
+  font-size: 0.875rem;
+  color: #b9ab98;
+}
+
+.footerStudio strong,
+.footerStudio a {
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+}

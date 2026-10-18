@@ -3,31 +3,14 @@
  * yyyy-mm-dd strings compared in UTC so time zones can't shift a night.
  */
 import { contactValue, type ContactMethod } from "@/lib/contact";
+import { addDays, nightsBetween, todayInBangkok, toUTC } from "@/lib/dates";
 import type { Locale } from "@/lib/i18n";
 import { request } from "./content";
 import { getRoom, nightlyRooms, type RoomId } from "./rooms";
 
 export const MAX_NIGHTS = 28;
 
-const toUTC = (iso: string) => {
-  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
-  return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) : NaN;
-};
-
-export function nightsBetween(checkIn: string, checkOut: string): number | null {
-  const a = toUTC(checkIn);
-  const b = toUTC(checkOut);
-  if (Number.isNaN(a) || Number.isNaN(b)) return null;
-  return Math.round((b - a) / 86_400_000);
-}
-
-export const addDays = (iso: string, days: number) => {
-  const t = toUTC(iso);
-  return new Date(t + days * 86_400_000).toISOString().slice(0, 10);
-};
-
-/** Today in Bangkok (UTC+7), as yyyy-mm-dd. */
-export const todayInBangkok = (now = new Date()) => new Date(now.getTime() + 7 * 3_600_000).toISOString().slice(0, 10);
+export { addDays, nightsBetween, todayInBangkok };
 
 /** Rooms that fit the party size (nightly rooms only). */
 export const roomsFor = (guests: number) => nightlyRooms.filter((r) => r.sleeps >= guests);

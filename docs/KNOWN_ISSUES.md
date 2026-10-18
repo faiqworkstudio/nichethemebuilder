@@ -37,3 +37,7 @@ Add each issue with severity, affected demo, reproduction, current status, and n
 - **Triage wording needs a dentist's review** — Severity: medium before a real pitch. Logic is deliberately conservative (red flags → hospital) and unit tested, but clinical wording should be checked by a professional.
 - **Sample prices** — by design and labelled; a real clinic must supply its own price list (and check rules on displaying prices).
 - **Thai proofread and real-device check pending** — Severity: medium.
+
+### D05 Thara Thai Massage & Spa (2026-10-18)
+- **No live availability** — by design; times are labelled as preferences. A real spa would connect a booking system or `NEXT_PUBLIC_THARA_BOOKING_ENDPOINT`.
+- **Thai proofread and real-device check pending** — Severity: medium.

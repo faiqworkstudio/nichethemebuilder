@@ -63,3 +63,14 @@ portrait 1400 px wide) and re-encoded as progressive JPEG; `next/image` serves A
 | xray-talk.jpg | photo-1606811841689-23dfddce3e95 |
 | hands.jpg | photo-1584515933487-779824d29309 |
 | toothbrushes.jpg | photo-1607613009820-a29f7bb81c04 |
+
+## D05 — Thara Thai Massage & Spa (`src/demos/thara-spa/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| overhead.jpg | photo-1596178060671-7a80dc8059ea |
+| thai-massage.jpg | photo-1611073615830-9f76902c10fe |
+| foot-spa.jpg | photo-1519415510236-718bdfcd89c8 |
+| oil.jpg | photo-1544161515-4ab6ce6db874 |
+| garden-room.jpg | photo-1560750588-73207b1ef5b8 |
+| diffuser.jpg | photo-1620733723572-11c53f73a416 |

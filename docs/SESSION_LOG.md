@@ -40,3 +40,10 @@ Append a new dated entry after each Claude Code work session. Never replace prio
 - **Checks:** typecheck ✓; lint ✓; unit tests 35/35 ✓; build ✓ (21 static pages); smoke 29/29 ✓ across four demos (D04 7/7); zero console errors and no overflow on 9 routes at 360/390/820/1440; desktop + mobile visual review.
 - **Decision:** kept the header non-sticky (CLAUDE.md: no sticky elements covering content) — the "In pain?" route is already the first doorway tile.
 - **Exact next action:** D05 (spa / massage — Warm Minimal + Booking First), avoiding D02's arches/pills and D03's dark hero.
+
+## 2026-10-18 (session 2, continued) — D05 Thara Thai Massage & Spa
+- **Active demo and route:** D05 — `/demos/thara-spa/{th,en}`. Theme Warm Minimal + Booking First.
+- **Built:** hero booking ticket (treatment, length, date, start time within opening hours, people stepper, live sample price); olive menu board whose price lines start a booking; visit steps; good-to-know (pressure, pregnancy/injury, tipping, cancellation); details form with summary card and preview; FAQ and finding-us.
+- **Refactor:** Bangkok date/time helpers moved to `src/lib/dates.ts`; D03 now uses them (tests unchanged and passing).
+- **Checks:** typecheck ✓; lint ✓; unit tests 42/42 ✓; build ✓ (23 static pages); smoke 36/36 ✓ across five demos; zero console errors and no overflow on 11 routes at 360/390/820/1440; desktop + mobile visual review.
+- **Exact next action:** D06 (real estate — Property Explorer + Modern Swiss) with honest "sample listings" and filters; then regenerate screenshots.
