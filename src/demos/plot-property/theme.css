@@ -1,0 +1,108 @@
+/*
+ * Plot Property (Demo 06) — Property Explorer + Modern Swiss.
+ * White, black, one signal red; strict grid and hard edges. Scoped to body.plot.
+ */
+.plot {
+  --white: #ffffff;
+  --paper: #f4f4f2;
+  --ink: #111111;
+  --ink-2: #3d3d3d;
+  --muted: #5e5e5e;
+  --red: #d0021b;
+  --red-dark: #a50015;
+  --line: #d7d7d4;
+  --danger: #b0101f;
+
+  --font: var(--font-plot), "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+
+  --gutter: clamp(1rem, 3.5vw, 2.75rem);
+  --maxw: 1360px;
+  --space: clamp(4rem, 8vw, 7rem);
+
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.plot:lang(th) {
+  line-height: 1.75;
+}
+
+:where(.plot) *,
+:where(.plot) *::before,
+:where(.plot) *::after {
+  box-sizing: border-box;
+}
+
+:where(.plot) :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure) {
+  margin: 0;
+}
+
+:where(.plot) :where(ul, ol) {
+  padding: 0;
+  list-style: none;
+}
+
+:where(.plot) :where(img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:where(.plot) :where(a) {
+  color: inherit;
+}
+
+:where(.plot) :where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+
+.plot :focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
+
+.plot-wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.plot .visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.plot-skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 20;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: #fff;
+}
+
+.plot-skip:focus {
+  top: 0.5rem;
+}
+
+html:has(body.plot) {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.plot) {
+    scroll-behavior: auto;
+  }
+}

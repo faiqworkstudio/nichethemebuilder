@@ -47,3 +47,10 @@ Append a new dated entry after each Claude Code work session. Never replace prio
 - **Refactor:** Bangkok date/time helpers moved to `src/lib/dates.ts`; D03 now uses them (tests unchanged and passing).
 - **Checks:** typecheck ✓; lint ✓; unit tests 42/42 ✓; build ✓ (23 static pages); smoke 36/36 ✓ across five demos; zero console errors and no overflow on 11 routes at 360/390/820/1440; desktop + mobile visual review.
 - **Exact next action:** D06 (real estate — Property Explorer + Modern Swiss) with honest "sample listings" and filters; then regenerate screenshots.
+
+## 2026-10-18 (session 2, continued) — D06 Plot Property
+- **Active demo and route:** D06 — `/demos/plot-property/{th,en}` + 8 listing pages per language. Theme Property Explorer + Modern Swiss.
+- **Built:** hero with no-JS quick search; explorer (deal/type/area/beds/price cap/pets/sort) synced to the URL and remembered for the back link; listing pages with facts, features, "worth knowing" notes and a viewing request; "what renting costs" table; how-we-work; FAQ.
+- **Checks:** typecheck ✓; lint ✓; unit tests 49/49 ✓; build ✓ (41 static pages); smoke 44/44 ✓ across six demos; zero console errors and no overflow on 14 routes at 360/390/820/1440.
+- **Fixed during review:** back link lost searches that arrived via URL; viewing-form option groups overflowed; smoke test raced hydration (now waits for network idle).
+- **Exact next action:** D07 (B2B consulting — Modern Swiss is now taken as a secondary, so use Case Study Narrative + Quiet Editorial or another unused primary) and continue down the expansion queue; regenerate screenshots after each.

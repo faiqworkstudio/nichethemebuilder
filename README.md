@@ -14,6 +14,7 @@ interactions. `CLAUDE.md` is the source of truth for how demos are designed and 
 | `/demos/soi-nine/th` · `/en` | **D03 Soi Nine House** — boutique hotel / serviced apartment (Boutique Hotel + Neighbourhood Journal) |
 | `/demos/yim-dental/th` · `/en` | **D04 Yim Dental Clinic** — dental clinic (Humanist Professional + Treatment Library) |
 | `/demos/thara-spa/th` · `/en` | **D05 Thara Thai Massage & Spa** — massage & spa (Warm Minimal + Booking First) |
+| `/demos/plot-property/th` · `/en` (+ `/listings/<ref>`) | **D06 Plot Property** — real estate agent (Property Explorer + Modern Swiss) |
 
 ## Stack
 
@@ -55,6 +56,7 @@ src/
     soi-nine/                  # D03 — same shape as below
     yim-dental/                # D04 — same shape as below
     thara-spa/                 # D05 — same shape as below
+    plot-property/             # D06 — same shape as below
     sen-studio/                # ← everything that belongs to D01
       config.ts                #   business name, contact/LINE, enquiry endpoint (one place)
       content.ts               #   all copy, Thai + English side by side
@@ -106,7 +108,8 @@ Copy `.env.example` to `.env.local`:
 
 - `NEXT_PUBLIC_SITE_URL` — public base URL for canonical and social metadata.
 - `NEXT_PUBLIC_SEN_ENQUIRY_ENDPOINT`, `NEXT_PUBLIC_MALI_CONSULT_ENDPOINT`, `NEXT_PUBLIC_SOI_REQUEST_ENDPOINT`,
-  `NEXT_PUBLIC_YIM_APPOINTMENT_ENDPOINT`, `NEXT_PUBLIC_THARA_BOOKING_ENDPOINT` —
+  `NEXT_PUBLIC_YIM_APPOINTMENT_ENDPOINT`, `NEXT_PUBLIC_THARA_BOOKING_ENDPOINT`,
+  `NEXT_PUBLIC_PLOT_VIEWING_ENDPOINT` —
   when set, that demo's form POSTs JSON there; when empty the form runs in a clearly labelled preview mode and
   sends nothing.
 

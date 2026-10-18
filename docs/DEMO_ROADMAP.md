@@ -52,6 +52,11 @@ Build complete, convincing demos one at a time. Prefer quality and distinction o
 - [x] Automated + visual checks.
 - [ ] Thai proofread and real-device check → COMPLETE.
 
+### M4c — Demo 06: Real estate — REVIEW (Plot Property)
+- [x] Distinct theme (Property Explorer + Modern Swiss); filters in the URL; 8 sample listing pages.
+- [x] Automated + visual checks.
+- [ ] Thai proofread and real-device check → COMPLETE.
+
 ### M4 — Expansion
 Continue through the theme tracker. Prioritise based on prospect feedback and the industries the studio wants to sell to.
 
@@ -74,3 +79,4 @@ For each demo, record:
 - D03 Soi Nine House — see `docs/demos/D03_SOI_NINE.md` (status: REVIEW).
 - D04 Yim Dental Clinic — see `docs/demos/D04_YIM_DENTAL.md` (status: REVIEW).
 - D05 Thara Thai Massage & Spa — see `docs/demos/D05_THARA_SPA.md` (status: REVIEW).
+- D06 Plot Property — see `docs/demos/D06_PLOT_PROPERTY.md` (status: REVIEW).

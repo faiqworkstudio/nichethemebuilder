@@ -41,3 +41,8 @@ Add each issue with severity, affected demo, reproduction, current status, and n
 ### D05 Thara Thai Massage & Spa (2026-10-18)
 - **No live availability** — by design; times are labelled as preferences. A real spa would connect a booking system or `NEXT_PUBLIC_THARA_BOOKING_ENDPOINT`.
 - **Thai proofread and real-device check pending** — Severity: medium.
+
+### D06 Plot Property (2026-10-18)
+- **Static sample data** — by design. A real agency needs a listing feed or CMS; the search logic (`search.ts`) is already independent of the data source.
+- **Clicking filters before the page finishes loading** — Severity: low. On a very slow connection, a filter clicked before hydration can be reset when the explorer reads the URL. Next action: read the URL during first render once Next exposes it for static pages, or disable controls until mounted.
+- **Thai proofread and real-device check pending** — Severity: medium.

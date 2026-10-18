@@ -74,3 +74,24 @@ portrait 1400 px wide) and re-encoded as progressive JPEG; `next/image` serves A
 | oil.jpg | photo-1544161515-4ab6ce6db874 |
 | garden-room.jpg | photo-1560750588-73207b1ef5b8 |
 | diffuser.jpg | photo-1620733723572-11c53f73a416 |
+
+## D06 — Plot Property (`src/demos/plot-property/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| facade.jpg | photo-1515263487990-61b07816b324 |
+| pl101-a.jpg | photo-1493809842364-78817add7ffb |
+| pl101-b.jpg | photo-1484154218962-a197022b5858 |
+| pl102-a.jpg | photo-1502672260266-1c1ef2d93688 |
+| pl103-a.jpg | photo-1560448204-e02f11c3d0e2 |
+| pl103-b.jpg | photo-1600121848594-d8644e57abab |
+| pl104-a.jpg | photo-1580587771525-78b9dba3b914 |
+| pl104-b.jpg | photo-1600210492486-724fe5c67fb0 |
+| pl105-a.jpg | photo-1522708323590-d24dbb6b0267 |
+| pl105-b.jpg | photo-1583847268964-b28dc8f51f92 |
+| pl106-a.jpg | photo-1554995207-c18c203602cb |
+| pl106-b.jpg | photo-1565183997392-2f6f122e5912 |
+| pl107-a.jpg | photo-1586023492125-27b2c045efd7 |
+| pl107-b.jpg | photo-1618221195710-dd6b41faaea6 |
+| pl108-a.jpg | photo-1512917774080-9991f1c4c750 |
+| pl108-b.jpg | photo-1600566753190-17f0baa2a6c3 |

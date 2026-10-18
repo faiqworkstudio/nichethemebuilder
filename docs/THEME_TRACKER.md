@@ -9,7 +9,7 @@
 | D03 | Boutique hotel / serviced apartment (Soi Nine House) | Contemporary Boutique Hotel | Neighbourhood Journal | Full-bleed hero with overlaid header, planner bar, tabbed room catalogue, sketch map + journal | REVIEW | 2026-10-18 | Paper/teak/river green, Fraunces + Noto Serif Thai + Sarabun. Sample rates labelled; no reservation. Brief: `docs/demos/D03_SOI_NINE.md` |
 | D04 | Dental clinic (Yim Dental Clinic) | Humanist Professional | Treatment Library | Doorway tiles, "is it urgent?" triage tool, searchable treatment table → cards on mobile | REVIEW | 2026-10-18 | White/teal/sun-yellow, Mitr + Niramit. Triage routes red flags to hospital/1669. Brief: `docs/demos/D04_YIM_DENTAL.md` |
 | D05 | Thai massage & spa (Thara) | Warm Minimal | Booking First | Booking ticket in the hero, olive printed-menu price board with dotted leaders, staggered visit strip | REVIEW | 2026-10-18 | Cream/cocoa/olive/turmeric, Pridi + Krub. Sample prices; no live availability. Brief: `docs/demos/D05_THARA_SPA.md` |
-| D06 | Real estate | Property Explorer | Modern Swiss | Listing-led layout and useful filters | BACKLOG | — | Avoid fake live listings |
+| D06 | Real estate agent (Plot Property) | Property Explorer | Modern Swiss | Filter rail + results, URL-shareable search, 8 listing pages, cost table, numbered 3px-rule sections | REVIEW | 2026-10-18 | White/black/signal red, Bai Jamjuree only. Every listing labelled sample. Brief: `docs/demos/D06_PLOT_PROPERTY.md` |
 | D07 | B2B consulting | Modern Swiss | Case Study Narrative | Structured expertise and consultation path | BACKLOG | — | No invented results |
 | D08 | Tours / experiences | Playful Hospitality | Full-Bleed Documentary | Experience-led, itinerary and booking handoff | BACKLOG | — | — |
 | D09 | Restaurant / café | Menu-Led | Independent Magazine | Editorial menu, hours and location | BACKLOG | — | — |
@@ -36,6 +36,7 @@ Append dated entries when a theme is reserved, changed, completed, or retired.
 - **D03:** full-bleed photo hero with header over it, overlapping planner bar, vertical room tabs, dark teak band, hand-drawn SVG sketch map with numbered pins, Fraunces italic kickers.
 - **D04:** three numbered doorway tiles in the hero, triage question cards with coloured result states, semantic treatment table, yellow tick bullets, Mitr headings.
 - **D05:** hero booking ticket with stepper, full-width olive menu board with dotted price leaders, staggered 3-photo visit strip, Pridi light display.
+- **D06:** red index numerals with 3 px black section rules, bordered segmented controls, hard-edged listing rows, single-typeface Swiss hierarchy.
 - **Klickdoe shell (updated 2026-10-18):** warm paper + navy/blue, Bricolage Grotesque + Inter + Caveat handwriting, taped screenshot prints, sticky-note tips, outlined demo numerals — reserved for the studio's own pages.
 
 ### 2026-10-18
@@ -47,3 +48,4 @@ Append dated entries when a theme is reserved, changed, completed, or retired.
 - Showcase shell restyled to a more human "studio wall" direction at the user's request.
 - D04 reserved `IN PROGRESS` → `REVIEW` (Humanist Professional + Treatment Library).
 - D05 reserved `IN PROGRESS` → `REVIEW` (Warm Minimal + Booking First).
+- D06 reserved `IN PROGRESS` → `REVIEW` (Property Explorer + Modern Swiss).
