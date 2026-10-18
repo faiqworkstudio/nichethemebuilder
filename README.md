@@ -82,6 +82,13 @@ Copy `src/demos/<slug>/`, its route folder, `src/lib/i18n.ts` and the config fil
 project (or this repo minus the other demos), then fill in `config.ts` with the client's real name, contact
 details, LINE URL and enquiry endpoint, and replace concept content and photography with real material.
 
+## Deploying (Vercel)
+
+Import the repo in Vercel; `vercel.json` pins the framework to Next.js, so the project works even if it was
+created while the repository was still empty (which otherwise saves the preset as "Other" and serves only
+`public/`, giving `404 NOT_FOUND` on every page). Leave Root Directory, Build Command and Output Directory on
+their defaults.
+
 ## Configuration
 
 Copy `.env.example` to `.env.local`:
