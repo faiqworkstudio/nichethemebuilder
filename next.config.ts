@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: "/demos/sen-studio", destination: "/demos/sen-studio/th", permanent: false },
       { source: "/demos/mali-clinic", destination: "/demos/mali-clinic/th", permanent: false },
       { source: "/demos/soi-nine", destination: "/demos/soi-nine/th", permanent: false },
+      { source: "/demos/yim-dental", destination: "/demos/yim-dental/th", permanent: false },
     ];
   },
   images: {

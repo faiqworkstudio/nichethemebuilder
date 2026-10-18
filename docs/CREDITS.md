@@ -54,3 +54,12 @@ portrait 1400 px wide) and re-encoded as progressive JPEG; `next/image` serves A
 | temple.jpg | photo-1563492065599-3520f775eeed |
 | thai-food.jpg | photo-1562565652-a0d8f0c59eb4 |
 | cafe.jpg | photo-1555396273-367ea4eb4db5 |
+
+## D04 — Yim Dental Clinic (`src/demos/yim-dental/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| room-orange.jpg | photo-1598256989800-fe5f95da9787 |
+| xray-talk.jpg | photo-1606811841689-23dfddce3e95 |
+| hands.jpg | photo-1584515933487-779824d29309 |
+| toothbrushes.jpg | photo-1607613009820-a29f7bb81c04 |

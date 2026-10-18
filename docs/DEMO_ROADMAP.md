@@ -42,6 +42,11 @@ Build complete, convincing demos one at a time. Prefer quality and distinction o
 - [x] Automated + visual checks.
 - [ ] Native Thai proofread and real-device check → COMPLETE.
 
+### M4a — Demo 04: Dental clinic — REVIEW (Yim Dental Clinic)
+- [x] Distinct theme (Humanist Professional + Treatment Library); urgency guide; searchable treatment table.
+- [x] Automated + visual checks.
+- [ ] Thai proofread, real-device check, dentist review of triage wording → COMPLETE.
+
 ### M4 — Expansion
 Continue through the theme tracker. Prioritise based on prospect feedback and the industries the studio wants to sell to.
 
@@ -62,3 +67,4 @@ For each demo, record:
 - D01 Sen Studio — see `docs/demos/D01_SEN_STUDIO.md` (status: REVIEW).
 - D02 Mali Skin Clinic — see `docs/demos/D02_MALI_CLINIC.md` (status: REVIEW).
 - D03 Soi Nine House — see `docs/demos/D03_SOI_NINE.md` (status: REVIEW).
+- D04 Yim Dental Clinic — see `docs/demos/D04_YIM_DENTAL.md` (status: REVIEW).

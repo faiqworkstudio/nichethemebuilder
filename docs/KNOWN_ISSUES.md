@@ -32,3 +32,8 @@ Add each issue with severity, affected demo, reproduction, current status, and n
 
 ### Showcase
 - **Hero collage shows the first three demos only** — by design; later demos appear in the list below.
+
+### D04 Yim Dental Clinic (2026-10-18)
+- **Triage wording needs a dentist's review** — Severity: medium before a real pitch. Logic is deliberately conservative (red flags → hospital) and unit tested, but clinical wording should be checked by a professional.
+- **Sample prices** — by design and labelled; a real clinic must supply its own price list (and check rules on displaying prices).
+- **Thai proofread and real-device check pending** — Severity: medium.

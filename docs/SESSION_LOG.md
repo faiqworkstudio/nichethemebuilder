@@ -33,3 +33,10 @@ Append a new dated entry after each Claude Code work session. Never replace prio
 - **Checks run:** typecheck ✓; lint ✓; unit tests 28/28 ✓; build ✓ (19 static pages); smoke 22/22 ✓ (D01 8, D02 6, D03 8); zero console errors and no horizontal overflow on 7 routes at 360/390/820/1440 px; full-page visual review of D02, D03 and the showcase at desktop and mobile. Fixed during review: function prop passed to a client component (build error), D02 mobile header overflow and nav clipping, D02 image corner, D03 header inside `<main>`, D03 14 px mobile overflow from date inputs, duplicate hero/room photo, showcase note positions.
 - **Known issues:** native Thai proofread and real-device testing pending for D01–D03; D02 copy should be read against Thai clinic-advertising rules before a real pitch; no backends or real contacts by design.
 - **Exact next action:** start D04 (dental clinic — Humanist Professional + Treatment Library) with a layout that avoids D02's pills/arches; then regenerate screenshots so it appears on the showcase.
+
+## 2026-10-18 (session 2, continued) — D04 Yim Dental Clinic
+- **Active demo and route:** D04 — `/demos/yim-dental/{th,en}`. Theme Humanist Professional + Treatment Library.
+- **Built:** hero doorway tiles; "is it urgent?" triage (red flags → hospital/1669; injury/bleeding/constant pain → today; intermittent → 2–3 days; else routine) feeding the appointment form; nervous-patient section; searchable treatment table with sample prices (cards on mobile); first-visit steps and placeholder dentist slots; paying notes (written price first, Social Security check, PromptPay); appointment form with nervous flag; FAQ.
+- **Checks:** typecheck ✓; lint ✓; unit tests 35/35 ✓; build ✓ (21 static pages); smoke 29/29 ✓ across four demos (D04 7/7); zero console errors and no overflow on 9 routes at 360/390/820/1440; desktop + mobile visual review.
+- **Decision:** kept the header non-sticky (CLAUDE.md: no sticky elements covering content) — the "In pain?" route is already the first doorway tile.
+- **Exact next action:** D05 (spa / massage — Warm Minimal + Booking First), avoiding D02's arches/pills and D03's dark hero.
