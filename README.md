@@ -10,6 +10,8 @@ interactions. `CLAUDE.md` is the source of truth for how demos are designed and 
 | `/` | Klickdoe showcase — every demo with desktop / iPad / mobile screenshots |
 | `/demos/sen-studio/th` · `/en` | **D01 Sen Studio** — interior design & renovation (Architectural Portfolio) |
 | `/demos/sen-studio/{th,en}/projects/<slug>` | Five concept project pages |
+| `/demos/mali-clinic/th` · `/en` | **D02 Mali Skin Clinic** — skin & aesthetic clinic (Soft Contemporary) |
+| `/demos/soi-nine/th` · `/en` | **D03 Soi Nine House** — boutique hotel / serviced apartment (Boutique Hotel + Neighbourhood Journal) |
 
 ## Stack
 
@@ -30,7 +32,7 @@ npm test             # unit tests (tests/*.test.ts)
 npm run check        # typecheck + lint + unit tests
 
 # With `npm start` running in another terminal:
-npm run smoke        # browser smoke test of D01 flows (language switch, filters, form, planner)
+npm run smoke        # browser smoke tests for every demo (scripts/smoke-*.mjs)
 npm run screenshots  # regenerate public/showcase/<demo>/{desktop,tablet,mobile}.jpg
 ```
 
@@ -47,6 +49,8 @@ src/
     (studio)/                  # Klickdoe showcase shell (own root layout, lang="en")
     demos/sen-studio/[lang]/   # thin route files for D01 (own root layout, lang="th"|"en")
   demos/
+    mali-clinic/               # D02 — same shape as below
+    soi-nine/                  # D03 — same shape as below
     sen-studio/                # ← everything that belongs to D01
       config.ts                #   business name, contact/LINE, enquiry endpoint (one place)
       content.ts               #   all copy, Thai + English side by side
@@ -57,8 +61,9 @@ src/
       components/              #   section components + CSS Modules
       assets/                  #   photography
   studio/                      # showcase components, demo registry, shared types
+  components/LocaleSwitch.tsx  # TH/EN switcher shared by all demos (styled per demo)
   config/studio.ts             # Klickdoe label + contact details (null until real)
-  lib/i18n.ts                  # locale helpers shared by all demos
+  lib/                         # i18n, contact validation, ฿ formatting, bilingual metadata
 tests/                         # unit tests per demo
 scripts/                       # screenshot capture + smoke tests
 docs/                          # trackers, design system, decisions, per-demo briefs
@@ -73,8 +78,10 @@ Rules that keep demos separate:
 
 1. Reserve a theme in `docs/THEME_TRACKER.md` and write a brief in `docs/demos/`.
 2. Create `src/demos/<slug>/` (config, content, components, assets, theme) and `src/app/demos/<slug>/[lang]/`.
-3. Add `src/demos/<slug>/showcase.ts` and register it in `src/studio/registry.ts`.
-4. `npm run build && npm start`, then `npm run screenshots` to add it to the showcase.
+3. Keep form/booking rules in a React-free module (no image imports) and add `tests/<slug>-*.test.ts`.
+4. Add `scripts/smoke-<slug>.mjs` and a redirect for `/demos/<slug>` in `next.config.ts`.
+5. Add `src/demos/<slug>/showcase.ts` and register it in `src/studio/registry.ts`.
+6. `npm run build && npm start`, then `npm run screenshots` to add it to the showcase.
 
 ### Handing a demo to a client
 
@@ -94,8 +101,9 @@ their defaults.
 Copy `.env.example` to `.env.local`:
 
 - `NEXT_PUBLIC_SITE_URL` — public base URL for canonical and social metadata.
-- `NEXT_PUBLIC_SEN_ENQUIRY_ENDPOINT` — when set, the D01 form POSTs JSON there; when empty the form runs in a
-  clearly labelled preview mode and sends nothing.
+- `NEXT_PUBLIC_SEN_ENQUIRY_ENDPOINT`, `NEXT_PUBLIC_MALI_CONSULT_ENDPOINT`, `NEXT_PUBLIC_SOI_REQUEST_ENDPOINT` —
+  when set, that demo's form POSTs JSON there; when empty the form runs in a clearly labelled preview mode and
+  sends nothing.
 
 Contact details (email, LINE, phone) are `null` in `src/config/studio.ts` and `src/demos/*/config.ts` until real,
 verified details are supplied; the UI hides or labels them instead of showing dead links.

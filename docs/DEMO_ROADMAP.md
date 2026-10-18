@@ -29,16 +29,18 @@ Build complete, convincing demos one at a time. Prefer quality and distinction o
 - [x] Run checks and review actual rendered page.
 - [ ] Native Thai proofread + real-device check → then mark COMPLETE.
 
-### M2 — Demo 02: Beauty / aesthetic clinic
-- [ ] Use a materially different primary theme and layout.
-- [ ] Avoid fabricated credentials, outcomes and testimonials.
-- [ ] Implement Thai-English site and clear enquiry path.
-- [ ] Run quality gates.
+### M2 — Demo 02: Beauty / aesthetic clinic — REVIEW (Mali Skin Clinic)
+- [x] Use a materially different primary theme and layout (Soft Contemporary).
+- [x] Avoid fabricated credentials, outcomes and testimonials (placeholder doctor slots, no prices/outcomes).
+- [x] Implement Thai-English site and clear enquiry path (concern finder → consultation form).
+- [x] Automated + visual checks.
+- [ ] Native Thai proofread, real-device check, clinic-advertising read → COMPLETE.
 
-### M3 — Demo 03: Boutique hotel / serviced apartment
-- [ ] Use a third distinct primary theme and layout.
-- [ ] Integrate a real configured booking destination or clearly labelled demo state.
-- [ ] Run quality gates.
+### M3 — Demo 03: Boutique hotel / serviced apartment — REVIEW (Soi Nine House)
+- [x] Use a third distinct primary theme and layout (Contemporary Boutique Hotel).
+- [x] Configurable booking-engine hand-off (`bookingProviderUrl`) plus clearly labelled demo request.
+- [x] Automated + visual checks.
+- [ ] Native Thai proofread and real-device check → COMPLETE.
 
 ### M4 — Expansion
 Continue through the theme tracker. Prioritise based on prospect feedback and the industries the studio wants to sell to.
@@ -58,3 +60,5 @@ For each demo, record:
 
 ## Acceptance records
 - D01 Sen Studio — see `docs/demos/D01_SEN_STUDIO.md` (status: REVIEW).
+- D02 Mali Skin Clinic — see `docs/demos/D02_MALI_CLINIC.md` (status: REVIEW).
+- D03 Soi Nine House — see `docs/demos/D03_SOI_NINE.md` (status: REVIEW).

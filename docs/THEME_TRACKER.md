@@ -5,8 +5,8 @@
 | Demo ID | Industry | Primary theme | Secondary influence | Layout signature | Status | Last updated | Notes |
 |---|---|---|---|---|---|---|---|
 | D01 | Interior design / renovation (Sen Studio) | Architectural Portfolio | Portfolio-to-Quote | Sheet-numbered ruled sections, title block, hover-preview project index, budget planner → enquiry | REVIEW | 2026-10-18 | Built. Plaster/ink/laterite, IBM Plex Sans Thai + Plex Mono, no cards/radius/shadows. Brief: `docs/demos/D01_SEN_STUDIO.md` |
-| D02 | Beauty / aesthetic clinic | Soft Contemporary | Consultation First | Treatment-led navigation, calm editorial sections | NOT STARTED | — | Avoid unsupported medical claims |
-| D03 | Boutique hotel / serviced apartment | Contemporary Boutique Hotel | Neighborhood Journal | Immersive room imagery, location editorial, booking handoff | NOT STARTED | — | No fake booking success |
+| D02 | Skin / aesthetic clinic (Mali Skin Clinic) | Soft Contemporary | Consultation First | Arch/circle image masks, pill nav, concern finder shared with booking form, placeholder doctor slots | REVIEW | 2026-10-18 | Milk/sage/clay, Trirong + Anuphan. No prices, outcomes or credentials invented. Brief: `docs/demos/D02_MALI_CLINIC.md` |
+| D03 | Boutique hotel / serviced apartment (Soi Nine House) | Contemporary Boutique Hotel | Neighbourhood Journal | Full-bleed hero with overlaid header, planner bar, tabbed room catalogue, sketch map + journal | REVIEW | 2026-10-18 | Paper/teak/river green, Fraunces + Noto Serif Thai + Sarabun. Sample rates labelled; no reservation. Brief: `docs/demos/D03_SOI_NINE.md` |
 | D04 | Dental clinic | Humanist Professional | Treatment Library | Expertise-first service pages and FAQs | BACKLOG | — | Verify regulated claims |
 | D05 | Spa / massage | Warm Minimal | Booking First | Sensory photography and clear service menu | BACKLOG | — | — |
 | D06 | Real estate | Property Explorer | Modern Swiss | Listing-led layout and useful filters | BACKLOG | — | Avoid fake live listings |
@@ -32,7 +32,14 @@ Append dated entries when a theme is reserved, changed, completed, or retired.
 
 ### Reserved visual vocabulary (do not reuse in later demos)
 - **D01:** sheet-code section strips (A-01…), dimension lines, title-block fact row, ruled "schedule" tables, plaster `#f3f0ea` + ink + laterite `#9a4426` palette, IBM Plex Sans Thai light display type, square-cornered controls.
-- **Klickdoe shell:** navy / blue / light-blue, Poppins + Inter, rounded cards with soft shadow — reserved for the studio's own pages.
+- **D02:** arch and circle image masks, pill navigation and chips, milk `#f8f4ee` + forest `#344a3c` + clay palette, Trirong headings, dashed placeholder cards.
+- **D03:** full-bleed photo hero with header over it, overlapping planner bar, vertical room tabs, dark teak band, hand-drawn SVG sketch map with numbered pins, Fraunces italic kickers.
+- **Klickdoe shell (updated 2026-10-18):** warm paper + navy/blue, Bricolage Grotesque + Inter + Caveat handwriting, taped screenshot prints, sticky-note tips, outlined demo numerals — reserved for the studio's own pages.
 
 ### 2026-10-18
 - D01 reserved as `IN PROGRESS` (Architectural Portfolio + Portfolio-to-Quote) before coding; moved to `REVIEW` after build and checks. Not `COMPLETE` until native Thai proofread and real-device check.
+
+### 2026-10-18 (later)
+- D02 reserved `IN PROGRESS` → `REVIEW` (Soft Contemporary + Consultation First).
+- D03 reserved `IN PROGRESS` → `REVIEW` (Contemporary Boutique Hotel + Neighbourhood Journal).
+- Showcase shell restyled to a more human "studio wall" direction at the user's request.

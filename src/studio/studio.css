@@ -295,13 +295,15 @@
   transform: rotate(-4deg);
 }
 
+/* Curls from the note up towards the prints. */
 .kd-arrow {
   position: absolute;
-  width: 4.5rem;
-  height: 3.5rem;
-  right: -4.75rem;
-  top: -2.5rem;
-  transform: rotate(-80deg);
+  width: 3.6rem;
+  height: 2.8rem;
+  left: 100%;
+  top: -2.6rem;
+  margin-left: 0.4rem;
+  transform: scaleY(-1) rotate(10deg);
 }
 
 /* ---------- Work ---------- */
@@ -669,8 +671,8 @@
 }
 
 .kd-note-phone {
-  right: -5.5rem;
-  top: 12%;
+  right: -8rem;
+  top: 6%;
   width: 7.5rem;
   font-size: 1.35rem;
   transform: rotate(6deg);

@@ -28,3 +28,29 @@ concept projects; they are **not** the work of any demo business.
 
 Source URL pattern: `https://images.unsplash.com/<photo ID>`. Images were resized (landscape 2000 px wide,
 portrait 1400 px wide) and re-encoded as progressive JPEG; `next/image` serves AVIF/WebP at runtime.
+
+## D02 — Mali Skin Clinic (`src/demos/mali-clinic/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| hands-jar.jpg | photo-1619451334792-150fd785ee74 |
+| facial-gloves.jpg | photo-1552693673-1bf958298935 |
+| serum-eucalyptus.jpg | photo-1617897903246-719242758050 |
+| bottles-aloe.jpg | photo-1631729371254-42c2892f0e6e |
+
+## D03 — Soi Nine House (`src/demos/soi-nine/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| teak-room.jpg | photo-1611892440504-42a792e24d32 |
+| garden-room.jpg | photo-1582719478250-c89cae4dc85b |
+| city-room.jpg | photo-1566665797739-1674de7a421a |
+| loft.jpg | photo-1578683010236-d716f9a3f461 |
+| studio.jpg | photo-1564078516393-cf04bd966897 |
+| lobby.jpg | photo-1611048267451-e6ed903d4a38 |
+| breakfast.jpg | photo-1445116572660-236099ec97a0 |
+| dining.jpg | photo-1551632436-cbf8dd35adfa |
+| chinatown.jpg | photo-1508009603885-50cf7c579365 |
+| temple.jpg | photo-1563492065599-3520f775eeed |
+| thai-food.jpg | photo-1562565652-a0d8f0c59eb4 |
+| cafe.jpg | photo-1555396273-367ea4eb4db5 |

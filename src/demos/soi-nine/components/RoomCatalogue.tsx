@@ -14,7 +14,8 @@ import styles from "./Soi.module.css";
 /** Tabbed room catalogue (WAI-ARIA tabs with arrow-key support). */
 export function RoomCatalogue({ lang }: { lang: Locale }) {
   const { checkIn, checkOut, guests, update } = useStay();
-  const [active, setActive] = useState<RoomId>("teak");
+  // Open on the Garden Room: the Teak Room is already the hero photograph.
+  const [active, setActive] = useState<RoomId>("garden");
   const tabs = useRef<Record<string, HTMLButtonElement | null>>({});
   const room = rooms.find((r) => r.id === active)!;
   const nights = checkIn && checkOut ? nightsBetween(checkIn, checkOut) : null;

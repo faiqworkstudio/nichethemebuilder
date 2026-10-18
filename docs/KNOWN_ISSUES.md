@@ -18,3 +18,17 @@ Add each issue with severity, affected demo, reproduction, current status, and n
 - **Klickdoe contact details not configured** — Severity: medium for sales use. `src/config/studio.ts` has `email`/`lineUrl` set to null, so the showcase hides its contact CTA in production. Next action: add real details.
 - **Showcase is English only** — Severity: low. The shell has one Thai line; a full Thai version could follow once there are more demos.
 - **Screenshots must be regenerated after visual changes** — run `npm run build && npm start`, then `npm run screenshots`, and commit `public/showcase/`.
+
+### D02 Mali Skin Clinic (2026-10-18)
+- **Thai proofread and real-device check pending** — Severity: medium. Same as D01.
+- **Clinic-advertising rules** — Severity: medium before showing to a real clinic. Copy avoids prices, promotions, outcomes and invented credentials, but should be read against current Thai rules for medical-facility advertising.
+- **Consultation form has no backend** — by design; preview mode labelled. Set `NEXT_PUBLIC_MALI_CONSULT_ENDPOINT` for a real clinic.
+- **No clinic interior photography** — Severity: low. Imagery is products, hands and facials; a real clinic should supply its own rooms and team.
+
+### D03 Soi Nine House (2026-10-18)
+- **Thai proofread and real-device check pending** — Severity: medium. Check native date pickers on iOS Safari and Android Chrome.
+- **No real availability** — by design. Sample rates are labelled; connect `bookingProviderUrl` or `NEXT_PUBLIC_SOI_REQUEST_ENDPOINT` for a real property.
+- **Sketch map is illustrative** — Severity: low. Pins are approximate and labelled "not to scale"; a live site might add an embedded map (needs a provider and consent review).
+
+### Showcase
+- **Hero collage shows the first three demos only** — by design; later demos appear in the list below.

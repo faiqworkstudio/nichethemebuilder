@@ -244,6 +244,8 @@
 
 .plannerField input,
 .plannerField select {
+  width: 100%;
+  min-width: 0;
   border: 0;
   background: transparent;
   font-size: 1.05rem;
@@ -295,7 +297,7 @@
   }
 
   .planner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .plannerField:nth-child(2) {
@@ -870,7 +872,7 @@
 
 @media (max-width: 900px) {
   .requestGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
