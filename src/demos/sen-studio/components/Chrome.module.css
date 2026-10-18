@@ -1,0 +1,302 @@
+/* ---------- Demo notice (in flow, never floating) ---------- */
+.notice {
+  background: var(--ink);
+  color: var(--dark-ink);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.notice p {
+  padding-block: 0.55rem;
+}
+
+.noticeTag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--dark-muted);
+  padding: 0.05rem 0.4rem;
+  margin-right: 0.4rem;
+}
+
+/* ---------- Header ---------- */
+.header {
+  border-bottom: 1px solid var(--ink);
+}
+
+.headerInner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--col-gap);
+  min-height: 4.25rem;
+}
+
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  padding-block: 0.5rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  line-height: 1;
+}
+
+.wordmarkLatin {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+
+.wordmarkRule {
+  width: 2.25rem;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+
+.wordmarkRule::before,
+.wordmarkRule::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: currentColor;
+}
+
+.wordmarkRule::before {
+  left: 0;
+}
+
+.wordmarkRule::after {
+  right: 0;
+}
+
+.wordmarkThai {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2.2vw, 2.25rem);
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  padding-block: 0.5rem;
+  background: linear-gradient(currentColor, currentColor) no-repeat left bottom / 0 1px;
+  transition: background-size 0.25s ease, color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--ink);
+  background-size: 100% 1px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+}
+
+.lang > * + *::before {
+  content: "/";
+  color: var(--rule);
+  margin-inline: 0.35rem;
+}
+
+.langCurrent {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.langLink {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.5rem 0.15rem;
+}
+
+.langLink:hover {
+  color: var(--accent);
+}
+
+.headerCta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 1.1rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.headerCta:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 960px) {
+  .headerInner {
+    grid-template-columns: 1fr auto;
+    row-gap: 0;
+  }
+
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    border-top: 1px solid var(--rule);
+    margin-inline: calc(var(--gutter) * -1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav ul {
+    justify-content: flex-start;
+    padding-inline: var(--gutter);
+    gap: 1.4rem;
+    white-space: nowrap;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding-block: 0.7rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerActions {
+    gap: 0.75rem;
+  }
+
+  .headerCta {
+    padding: 0 0.8rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--dark);
+  color: var(--dark-ink);
+  padding-block: clamp(3.5rem, 7vw, 6rem) 2.5rem;
+  font-size: 0.9375rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--col-gap);
+  row-gap: 2.5rem;
+}
+
+.footerMark {
+  grid-column: 1 / span 4;
+}
+
+.footerMark .wordmarkLatin,
+.footerMark .wordmarkThai {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 300;
+}
+
+.footerMark .wordmarkRule {
+  width: 3.5rem;
+}
+
+.footerMark p {
+  margin-top: 0.9rem;
+  color: var(--dark-muted);
+}
+
+.footerGrid h2 {
+  font-weight: 400;
+  color: var(--dark-muted);
+  margin-bottom: 1rem;
+}
+
+.footerGrid > div:nth-child(2) {
+  grid-column: 5 / span 3;
+}
+
+.contactList li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0.5rem;
+  padding-block: 0.45rem;
+  border-top: 1px solid var(--dark-rule);
+}
+
+.contactList .muted,
+.muted {
+  color: var(--dark-muted);
+  font-size: 0.875rem;
+}
+
+.footerCta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--dark-ink);
+  text-underline-offset: 0.3em;
+}
+
+.footerNotes {
+  grid-column: 9 / span 4;
+  display: grid;
+  gap: 1rem;
+  color: var(--dark-muted);
+  font-size: 0.875rem;
+}
+
+.footerStudio {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--dark-rule);
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--dark-muted);
+}
+
+.footerStudio strong {
+  color: var(--dark-ink);
+  font-weight: 500;
+}
+
+.footerStudio a {
+  color: var(--dark-ink);
+  text-underline-offset: 0.3em;
+}
+
+.footer :focus-visible {
+  outline-color: var(--dark-ink);
+}
+
+@media (max-width: 860px) {
+  .footerMark,
+  .footerGrid > div:nth-child(2),
+  .footerNotes {
+    grid-column: 1 / -1;
+  }
+}

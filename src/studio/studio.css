@@ -1,0 +1,505 @@
+/*
+ * Klickdoe studio shell — the portfolio's own brand.
+ * Light / blue / navy direction from the studio design DNA, scoped to body.kd.
+ */
+.kd {
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+  --navy: #0f1f3d;
+  --navy-2: #3b4a66;
+  --muted: #5b6880;
+  --blue: #2457d6;
+  --blue-dark: #1b44ab;
+  --blue-soft: #e7eefc;
+  --line: #dde4f0;
+  --radius: 22px;
+  --shadow: 0 1px 2px rgba(15, 31, 61, 0.06), 0 18px 40px -18px rgba(15, 31, 61, 0.22);
+  --gutter: clamp(1rem, 4vw, 3rem);
+
+  margin: 0;
+  background: var(--bg);
+  color: var(--navy);
+  font-family: var(--font-body), var(--font-thai), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kd *,
+.kd *::before,
+.kd *::after {
+  box-sizing: border-box;
+}
+
+.kd :where(h1, h2, h3, p, ul, dl, dd, figure) {
+  margin: 0;
+}
+
+.kd :where(ul) {
+  padding: 0;
+  list-style: none;
+}
+
+.kd img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.kd :lang(th) {
+  font-family: var(--font-thai), sans-serif;
+}
+
+.kd :focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.kd-wrap {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.kd-skip {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.kd-skip:focus {
+  top: 0.75rem;
+}
+
+/* ---------- Header ---------- */
+.kd-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4.5rem;
+}
+
+.kd-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.kd-logo-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.kd-header nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.kd-header nav a {
+  color: var(--navy-2);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  padding-block: 0.5rem;
+}
+
+.kd-header nav a:hover {
+  color: var(--blue);
+}
+
+/* ---------- Hero ---------- */
+.kd-hero {
+  padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.kd-eyebrow {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.kd-hero h1 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  max-width: 17em;
+  text-wrap: balance;
+}
+
+.kd-lede {
+  margin-top: 1.5rem;
+  max-width: 40em;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--navy-2);
+}
+
+.kd-lede-th {
+  margin-top: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------- Demo list ---------- */
+.kd-work {
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.kd-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.kd-section-head h2,
+.kd-approach h2 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  letter-spacing: -0.02em;
+}
+
+.kd-section-head p {
+  max-width: 34em;
+  color: var(--muted);
+}
+
+.kd-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.kd-demo + .kd-demo {
+  margin-top: 2rem;
+}
+
+.kd-demo-id {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--blue-dark);
+}
+
+.kd-status {
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.kd-demo h3 {
+  margin-block: 0.6rem 1rem;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.kd-name-th {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0;
+  margin-top: 0.3rem;
+}
+
+.kd-demo-info > p {
+  color: var(--navy-2);
+}
+
+.kd-facts {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.kd-facts div {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.kd-facts dt {
+  color: var(--muted);
+}
+
+.kd-features {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.kd-features li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.kd-features li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.45em;
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  transform: rotate(-45deg);
+}
+
+.kd-palette {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.kd-palette span {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+.kd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.kd-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.9rem;
+  padding: 0 1.3rem;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.kd-button:hover {
+  background: var(--blue-dark);
+}
+
+.kd-button-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.kd-button-ghost:hover {
+  background: var(--blue-soft);
+}
+
+/* ---------- Device stage ---------- */
+.kd-stage {
+  position: relative;
+  align-self: center;
+  padding: 0 4% 18% 0;
+}
+
+.kd-device {
+  overflow: hidden;
+  background: #fff;
+}
+
+.kd-desktop {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.kd-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 1.9rem;
+  padding-inline: 0.75rem;
+  background: #eef2f8;
+  border-bottom: 1px solid var(--line);
+}
+
+.kd-browser-bar span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #c9d3e3;
+}
+
+.kd-browser-bar em {
+  margin-left: 0.75rem;
+  font-style: normal;
+  font-size: 0.6875rem;
+  color: var(--muted);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kd-tablet {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 34%;
+  border: 7px solid #1b2333;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.kd-mobile {
+  position: absolute;
+  right: 31%;
+  bottom: -2%;
+  width: 17%;
+  border: 5px solid #1b2333;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.kd-shot-links {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+
+.kd-shot-links a {
+  color: var(--blue-dark);
+}
+
+/* ---------- Approach ---------- */
+.kd-approach {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.kd-approach ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.kd-approach li {
+  border-top: 2px solid var(--blue);
+  padding-top: 1rem;
+}
+
+.kd-approach h3 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.kd-approach p {
+  color: var(--navy-2);
+  font-size: 0.9375rem;
+}
+
+/* ---------- Footer ---------- */
+.kd-footer {
+  background: var(--navy);
+  color: #e6ecf7;
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+
+.kd-footer h2 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1.25rem;
+}
+
+.kd-footer .kd-muted {
+  color: #b7c3da;
+}
+
+.kd-small {
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: #9fb0cf;
+}
+
+.kd-footer :focus-visible {
+  outline-color: #fff;
+}
+
+@media (max-width: 960px) {
+  .kd-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .kd-stage {
+    order: -1;
+  }
+
+  .kd-approach ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .kd-header nav a:not(:first-child) {
+    display: none;
+  }
+
+  .kd-approach ul {
+    grid-template-columns: 1fr;
+  }
+
+  .kd-tablet {
+    border-width: 4px;
+    border-radius: 10px;
+  }
+
+  .kd-mobile {
+    border-width: 3px;
+    border-radius: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kd * {
+    transition: none !important;
+  }
+}
