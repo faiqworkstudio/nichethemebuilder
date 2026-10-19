@@ -1,0 +1,110 @@
+/*
+ * Ledgerline Advisory (Demo 07) — Case Study Narrative + Quiet Editorial.
+ * Warm white paper, near-black ink, one claret accent; serif voice, footnotes. Scoped to body.ledger.
+ */
+.ledger {
+  --paper: #fbfaf7;
+  --panel: #f1eee7;
+  --ink: #16181d;
+  --ink-2: #474b54;
+  --muted: #61656e;
+  --claret: #7d2230;
+  --claret-hover: #621a25;
+  --rule: #d9d5cc;
+  --danger: #a3241b;
+
+  --serif: var(--font-ledger-serif), "Noto Serif Thai", Georgia, serif;
+  --sans: var(--font-ledger-sans), system-ui, sans-serif;
+
+  --gutter: clamp(1.1rem, 4vw, 3.5rem);
+  --maxw: 1240px;
+  --measure: 38rem;
+  --space: clamp(4.5rem, 9vw, 8rem);
+
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ledger:lang(th) {
+  line-height: 1.85;
+}
+
+:where(.ledger) *,
+:where(.ledger) *::before,
+:where(.ledger) *::after {
+  box-sizing: border-box;
+}
+
+:where(.ledger) :where(h1, h2, h3, h4, p, ul, ol, dl, dd, figure) {
+  margin: 0;
+}
+
+:where(.ledger) :where(ul, ol) {
+  padding: 0;
+  list-style: none;
+}
+
+:where(.ledger) :where(img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:where(.ledger) :where(a) {
+  color: inherit;
+}
+
+:where(.ledger) :where(button, input, select, textarea, output) {
+  font: inherit;
+  color: inherit;
+}
+
+.ledger :focus-visible {
+  outline: 2px solid var(--claret);
+  outline-offset: 3px;
+}
+
+.ledger-wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.ledger .visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.ledger-skip {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 20;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.ledger-skip:focus {
+  top: 0.5rem;
+}
+
+html:has(body.ledger) {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.ledger) {
+    scroll-behavior: auto;
+  }
+}

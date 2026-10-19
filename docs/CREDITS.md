@@ -95,3 +95,13 @@ portrait 1400 px wide) and re-encoded as progressive JPEG; `next/image` serves A
 | pl107-b.jpg | photo-1618221195710-dd6b41faaea6 |
 | pl108-a.jpg | photo-1512917774080-9991f1c4c750 |
 | pl108-b.jpg | photo-1600566753190-17f0baa2a6c3 |
+
+## D07 — Ledgerline Advisory (`src/demos/ledgerline/assets/`)
+
+| File | Unsplash photo ID |
+|---|---|
+| signing.jpg | photo-1450101499163-c8848c66ca85 |
+| cafe-counter.jpg | photo-1556742049-0cfed4f6a45d |
+| bags.jpg | photo-1607082348824-0a96f2a4b9da |
+| founder.jpg | photo-1611095973763-414019e72400 |
+| meeting.jpg | photo-1517048676732-d65bc937f952 |

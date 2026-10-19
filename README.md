@@ -15,6 +15,7 @@ interactions. `CLAUDE.md` is the source of truth for how demos are designed and 
 | `/demos/yim-dental/th` · `/en` | **D04 Yim Dental Clinic** — dental clinic (Humanist Professional + Treatment Library) |
 | `/demos/thara-spa/th` · `/en` | **D05 Thara Thai Massage & Spa** — massage & spa (Warm Minimal + Booking First) |
 | `/demos/plot-property/th` · `/en` (+ `/listings/<ref>`) | **D06 Plot Property** — real estate agent (Property Explorer + Modern Swiss) |
+| `/demos/ledgerline/th` · `/en` | **D07 Ledgerline Advisory** — accounting & business advisory (Case Study Narrative + Quiet Editorial) |
 
 ## Stack
 
@@ -57,6 +58,7 @@ src/
     yim-dental/                # D04 — same shape as below
     thara-spa/                 # D05 — same shape as below
     plot-property/             # D06 — same shape as below
+    ledgerline/                # D07 — same shape as below
     sen-studio/                # ← everything that belongs to D01
       config.ts                #   business name, contact/LINE, enquiry endpoint (one place)
       content.ts               #   all copy, Thai + English side by side

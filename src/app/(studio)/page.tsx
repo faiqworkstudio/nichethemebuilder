@@ -23,7 +23,8 @@ const steps = [
 
 export default function ShowcasePage() {
   const collage = demos.slice(0, 3);
-  const lead = demos[0];
+  // The phone print and the "inside" section show the newest demo, so the page changes as work is added.
+  const lead = demos[demos.length - 1];
 
   return (
     <>
@@ -99,6 +100,23 @@ export default function ShowcasePage() {
             </p>
           </div>
         </section>
+
+        <nav className="kd-index kd-wrap" aria-label="All demos">
+          <ol>
+            {demos.map((demo) => (
+              <li key={demo.slug}>
+                <a href={`#${demo.slug}`} style={{ "--demo-accent": demo.palette[2] } as React.CSSProperties}>
+                  <span className="kd-index-thumb">
+                    <Image src={screenshotPath(demo.slug, "mobile")} alt="" width={78} height={169} sizes="78px" />
+                  </span>
+                  <span className="kd-index-no">{demo.id.replace("D", "")}</span>
+                  <span className="kd-index-name">{demo.name}</span>
+                  <span className="kd-index-sector">{demo.industry}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
 
         <section id="work" className="kd-work" aria-labelledby="kd-work-title">
           <div className="kd-wrap">

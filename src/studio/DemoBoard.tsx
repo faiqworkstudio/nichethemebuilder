@@ -18,11 +18,12 @@ function Shot({ demo, device, priority }: { demo: DemoEntry; device: Device; pri
 }
 
 /** One demo as a pinned board: device screenshots, story, a "try this" note and links. */
-export function DemoBoard({ demo, index }: { demo: DemoEntry; index: number }) {
+export function DemoBoard({ demo, index, isNewest = false }: { demo: DemoEntry; index: number; isNewest?: boolean }) {
   const primary = demo.routes.th ?? demo.routes.en;
   const flip = index % 2 === 1;
   return (
     <article
+      id={demo.slug}
       className={`kd-board${flip ? " kd-board-flip" : ""}`}
       aria-labelledby={`${demo.slug}-title`}
       style={{ "--demo-accent": demo.palette[2] ?? "#2457d6", "--demo-bg": demo.palette[0] } as React.CSSProperties}
@@ -54,6 +55,7 @@ export function DemoBoard({ demo, index }: { demo: DemoEntry; index: number }) {
           <span>
             {demo.industry}
             <span className="kd-status">{demo.status}</span>
+            {isNewest ? <span className="kd-new kd-hand">new!</span> : null}
           </span>
         </p>
         <h3 id={`${demo.slug}-title`}>

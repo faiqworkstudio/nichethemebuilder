@@ -46,3 +46,8 @@ Add each issue with severity, affected demo, reproduction, current status, and n
 - **Static sample data** — by design. A real agency needs a listing feed or CMS; the search logic (`search.ts`) is already independent of the data source.
 - **Clicking filters before the page finishes loading** — Severity: low. On a very slow connection, a filter clicked before hydration can be reset when the explorer reads the URL. Next action: read the URL during first render once Next exposes it for static pages, or disable controls until mounted.
 - **Thai proofread and real-device check pending** — Severity: medium.
+
+### D07 Ledgerline Advisory (2026-10-19)
+- **Filing dates exclude public holidays** — Severity: medium. The card rolls weekend deadlines to Monday but doesn't know Thai public holidays or Revenue Department e-filing extensions. It says so on the card. Next action: a holiday list in config, reviewed yearly by the firm.
+- **Thai line breaks inside a few words** on narrow screens (e.g. "เตรียม") — Severity: low. Browser Thai segmentation; fix with `<wbr>`/non-breaking spans if a proofreader flags them.
+- **Thai proofread, accountant review and real-device check pending** — Severity: medium.

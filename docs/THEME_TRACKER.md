@@ -10,7 +10,7 @@
 | D04 | Dental clinic (Yim Dental Clinic) | Humanist Professional | Treatment Library | Doorway tiles, "is it urgent?" triage tool, searchable treatment table → cards on mobile | REVIEW | 2026-10-18 | White/teal/sun-yellow, Mitr + Niramit. Triage routes red flags to hospital/1669. Brief: `docs/demos/D04_YIM_DENTAL.md` |
 | D05 | Thai massage & spa (Thara) | Warm Minimal | Booking First | Booking ticket in the hero, olive printed-menu price board with dotted leaders, staggered visit strip | REVIEW | 2026-10-18 | Cream/cocoa/olive/turmeric, Pridi + Krub. Sample prices; no live availability. Brief: `docs/demos/D05_THARA_SPA.md` |
 | D06 | Real estate agent (Plot Property) | Property Explorer | Modern Swiss | Filter rail + results, URL-shareable search, 8 listing pages, cost table, numbered 3px-rule sections | REVIEW | 2026-10-18 | White/black/signal red, Bai Jamjuree only. Every listing labelled sample. Brief: `docs/demos/D06_PLOT_PROPERTY.md` |
-| D07 | B2B consulting | Modern Swiss | Case Study Narrative | Structured expertise and consultation path | BACKLOG | — | No invented results |
+| D07 | Accounting & business advisory (Ledgerline) | Case Study Narrative | Quiet Editorial | Masthead with double rule, live filing-date card in the hero, footnoted story spreads, fee estimator, timeline month | REVIEW | 2026-10-19 | Warm white/ink/claret, Taviraj + Noto Sans Thai. Stories labelled illustrative; fees sample. Brief: `docs/demos/D07_LEDGERLINE.md` |
 | D08 | Tours / experiences | Playful Hospitality | Full-Bleed Documentary | Experience-led, itinerary and booking handoff | BACKLOG | — | — |
 | D09 | Restaurant / café | Menu-Led | Independent Magazine | Editorial menu, hours and location | BACKLOG | — | — |
 | D10 | Pilates / yoga | Botanical Calm | Sport Performance | Class information and instructor profiles | BACKLOG | — | — |
@@ -37,6 +37,7 @@ Append dated entries when a theme is reserved, changed, completed, or retired.
 - **D04:** three numbered doorway tiles in the hero, triage question cards with coloured result states, semantic treatment table, yellow tick bullets, Mitr headings.
 - **D05:** hero booking ticket with stepper, full-width olive menu board with dotted price leaders, staggered 3-photo visit strip, Pridi light display.
 - **D06:** red index numerals with 3 px black section rules, bordered segmented controls, hard-edged listing rows, single-typeface Swiss hierarchy.
+- **D07:** masthead double rule, footnote markers + notes list, italic serif question headlines, "Illustrative scenario" outline tags, claret `#7d2230` accent, roman-numeral service list, vertical timeline rule.
 - **Klickdoe shell (updated 2026-10-18):** warm paper + navy/blue, Bricolage Grotesque + Inter + Caveat handwriting, taped screenshot prints, sticky-note tips, outlined demo numerals — reserved for the studio's own pages.
 
 ### 2026-10-18
@@ -49,3 +50,6 @@ Append dated entries when a theme is reserved, changed, completed, or retired.
 - D04 reserved `IN PROGRESS` → `REVIEW` (Humanist Professional + Treatment Library).
 - D05 reserved `IN PROGRESS` → `REVIEW` (Warm Minimal + Booking First).
 - D06 reserved `IN PROGRESS` → `REVIEW` (Property Explorer + Modern Swiss).
+
+### 2026-10-19
+- D07 reserved `IN PROGRESS` → `REVIEW` (Case Study Narrative + Quiet Editorial). Modern Swiss was dropped as D07's primary because D06 already uses it.

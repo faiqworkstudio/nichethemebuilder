@@ -26,7 +26,7 @@ export function DemoList({ demos }: { demos: DemoEntry[] }) {
       </p>
       <div className="kd-boards">
         {visible.map((demo) => (
-          <DemoBoard key={demo.slug} demo={demo} index={demos.indexOf(demo)} />
+          <DemoBoard key={demo.slug} demo={demo} index={demos.indexOf(demo)} isNewest={demo === demos[demos.length - 1]} />
         ))}
       </div>
     </>

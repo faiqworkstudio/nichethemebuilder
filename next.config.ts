@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       { source: "/demos/yim-dental", destination: "/demos/yim-dental/th", permanent: false },
       { source: "/demos/thara-spa", destination: "/demos/thara-spa/th", permanent: false },
       { source: "/demos/plot-property", destination: "/demos/plot-property/th", permanent: false },
+      { source: "/demos/ledgerline", destination: "/demos/ledgerline/th", permanent: false },
     ];
   },
   images: {

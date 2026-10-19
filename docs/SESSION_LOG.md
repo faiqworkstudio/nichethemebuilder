@@ -54,3 +54,13 @@ Append a new dated entry after each Claude Code work session. Never replace prio
 - **Checks:** typecheck ✓; lint ✓; unit tests 49/49 ✓; build ✓ (41 static pages); smoke 44/44 ✓ across six demos; zero console errors and no overflow on 14 routes at 360/390/820/1440.
 - **Fixed during review:** back link lost searches that arrived via URL; viewing-form option groups overflowed; smoke test raced hydration (now waits for network idle).
 - **Exact next action:** D07 (B2B consulting — Modern Swiss is now taken as a secondary, so use Case Study Narrative + Quiet Editorial or another unused primary) and continue down the expansion queue; regenerate screenshots after each.
+
+## 2026-10-19 — D07 Ledgerline Advisory + showcase polish
+- **Request:** "Continue improve design along the way" — keep adding demos and refining the showcase.
+- **Active demo and route:** D07 — `/demos/ledgerline/{th,en}`. Theme Case Study Narrative + Quiet Editorial.
+- **Files changed:** `src/demos/ledgerline/**`, `src/app/demos/ledgerline/[lang]/*`, `tests/ledgerline.test.ts`, `scripts/smoke-ledgerline.mjs`, `src/studio/registry.ts`, `src/app/(studio)/page.tsx`, `src/studio/DemoBoard.tsx`, `src/studio/studio.css`, `next.config.ts`, `.env.example`, `public/showcase/**`, docs.
+- **Built:** masthead + standfirst hero with a live "Coming up: filing dates" card (PND 1/3/53 and SSO on the 15th, PP 30 on the 23rd, weekends rolled to Monday); three illustrative question-led story spreads with footnotes; services list + sample fee estimator; "a month with us" timeline and working principles with a placeholder auditor slot; FAQ; intro-call form (stage, needs, structure, revenue, language, contact) with honest preview; notes list and footer.
+- **Showcase:** index strip of every demo under the hero (swipe row below 1200 px, wrapping grid above), "new!" tag on the newest demo, newest demo's phone screenshot in the hero and "inside" section; D06 spacing fixes.
+- **Checks:** typecheck ✓; lint ✓; unit tests 57/57 ✓; build ✓; smoke ✓ across seven demos (D07 7/7); zero console errors and no overflow on 16 routes at 360/390/820/1440; desktop + mobile visual review of D07 and the showcase.
+- **Fixed during review:** six-line hero headline; flipped story's narrow text column; "30-" orphan in the intro heading; intro double rule wider than the content; index strip clipping its last card on desktop.
+- **Exact next action:** D08 (private tours / cooking class — Playful Hospitality + Full-Bleed Documentary), avoiding D03's full-bleed-with-header-over hero and D05's booking ticket; regenerate screenshots after.
