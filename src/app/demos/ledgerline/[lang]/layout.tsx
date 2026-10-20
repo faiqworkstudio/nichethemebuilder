@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#fbfaf7" };
+export const viewport: Viewport = { themeColor: "#ffffff" };
 
 export default async function LedgerRootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
   const { lang } = await params;

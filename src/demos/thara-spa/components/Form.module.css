@@ -74,7 +74,7 @@
 .card {
   padding: clamp(1.3rem, 3.5vw, 2.25rem);
   border-radius: 6px;
-  background: #fbf7ef;
+  background: #ffffff;
   border: 1px solid var(--line);
 }
 

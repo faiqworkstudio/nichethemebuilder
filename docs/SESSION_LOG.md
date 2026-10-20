@@ -64,3 +64,12 @@ Append a new dated entry after each Claude Code work session. Never replace prio
 - **Checks:** typecheck ✓; lint ✓; unit tests 57/57 ✓; build ✓; smoke ✓ across seven demos (D07 7/7); zero console errors and no overflow on 16 routes at 360/390/820/1440; desktop + mobile visual review of D07 and the showcase.
 - **Fixed during review:** six-line hero headline; flipped story's narrow text column; "30-" orphan in the intro heading; intro double rule wider than the content; index strip clipping its last card on desktop.
 - **Exact next action:** D08 (private tours / cooking class — Playful Hospitality + Full-Bleed Documentary), avoiding D03's full-bleed-with-header-over hero and D05's booking ticket; regenerate screenshots after.
+
+## 2026-10-20 — Typography and background pass; D08–D10 in progress
+- **Requests:** "Next stop after 10. Make sure all the designs are clean, modern, responsive, and humanized fonts in English and Thai"; then "change the creamy backgrounds — more creative, different, human"; "push everything to main".
+- **Typography:** per-script font stacks (DESIGN_DECISIONS #20) for D01, D04, D05, D06; studio shell display headings now fall back to Noto Sans Thai for Thai names.
+- **Backgrounds:** cream removed everywhere (DESIGN_DECISIONS #21): graph paper (shell), concrete grain (D01), blush (D02), faded teal (D03), indigo cotton (D05), ledger green with ruled panel (D07). Showcase palettes and browser theme colours updated; screenshots regenerated.
+- **D08 Khao Hom Kitchen, D09 Toh Yao, D10 Lom Studio:** being built in separate git worktrees (one per demo) with pre-assigned, non-overlapping themes, fonts and non-cream palettes; they paused on a usage limit and were resumed. Not merged yet.
+- **Checks:** typecheck ✓; lint ✓; unit tests 57/57 ✓; build ✓; smoke ✓ (7 demos); zero console errors and no overflow on 16 routes at 360/390/820/1440; visual review of every changed page.
+- **Git:** pushed to `claude/festive-einstein-cwk0n5` and, at the user's request, to `main` (created — it did not exist on the remote).
+- **Exact next action:** merge D08–D10 when each passes its checks, add them to the registry/redirects/docs, regenerate screenshots, re-run all suites, push to both branches; then stop at D10 as requested.

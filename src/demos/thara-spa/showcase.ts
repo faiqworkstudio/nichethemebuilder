@@ -19,7 +19,7 @@ export const tharaShowcase: DemoEntry = {
     "Sample prices labelled; no fake confirmation",
   ],
   routes: { th: "/demos/thara-spa/th", en: "/demos/thara-spa/en" },
-  palette: ["#f6efe4", "#4f5a2b", "#c58a2a", "#2e231d"],
+  palette: ["#eceef5", "#4f5a2b", "#c58a2a", "#2e231d"],
   tryThis: "Tap a price on the olive menu board — the hero ticket jumps to that treatment and length.",
   sector: "Health & beauty",
   status: "Review",

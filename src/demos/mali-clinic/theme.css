@@ -3,9 +3,9 @@
  * Milk, sage and a little clay; rounded but not bubbly. Scoped to body.mali.
  */
 .mali {
-  --milk: #f8f4ee;
-  --cream: #efe7dc;
-  --sage-soft: #e3e8df;
+  --milk: #fbf2f0;
+  --cream: #f3e1dc;
+  --sage-soft: #e2ebe3;
   --sage: #8b9c86;
   --forest: #344a3c;
   --forest-hover: #263a2d;
@@ -13,7 +13,7 @@
   --ink-2: #4e4d49;
   --muted: #67655f;
   --clay: #a3573f;
-  --line: #ddd5c8;
+  --line: #ead5cf;
   --danger: #a3241b;
   --radius-lg: 32px;
   --radius: 18px;

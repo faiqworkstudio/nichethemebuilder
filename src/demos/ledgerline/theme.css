@@ -3,14 +3,14 @@
  * Warm white paper, near-black ink, one claret accent; serif voice, footnotes. Scoped to body.ledger.
  */
 .ledger {
-  --paper: #fbfaf7;
-  --panel: #f1eee7;
+  --paper: #ffffff;
+  --panel: #e9f1eb;
   --ink: #16181d;
   --ink-2: #474b54;
   --muted: #61656e;
   --claret: #7d2230;
   --claret-hover: #621a25;
-  --rule: #d9d5cc;
+  --rule: #cfdcd3;
   --danger: #a3241b;
 
   --serif: var(--font-ledger-serif), "Noto Serif Thai", Georgia, serif;

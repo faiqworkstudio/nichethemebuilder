@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#f8f4ee" };
+export const viewport: Viewport = { themeColor: "#fbf2f0" };
 
 export default async function MaliRootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
   const { lang } = await params;

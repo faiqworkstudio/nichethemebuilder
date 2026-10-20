@@ -5,8 +5,8 @@
  * Scoped to body.kd so demos never inherit it.
  */
 .kd {
-  --paper: #fbf8f3;
-  --paper-2: #f3eee5;
+  --paper: #f4f7fc;
+  --paper-2: #e8eef9;
   --surface: #ffffff;
   --navy: #13213f;
   --navy-2: #3a4864;
@@ -16,13 +16,18 @@
   --blue-soft: #e4ecfc;
   --pencil: #2a55c9;
   --tape: rgba(233, 222, 196, 0.85);
-  --line: #e2dccf;
+  --line: #d8e1ef;
   --radius: 20px;
   --shadow: 0 1px 2px rgba(19, 33, 63, 0.06), 0 22px 44px -22px rgba(19, 33, 63, 0.28);
   --gutter: clamp(1rem, 4vw, 3rem);
 
   margin: 0;
-  background: var(--paper);
+  /* Sketchbook graph paper: a faint blue grid, like the pads our layouts start on. */
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(36, 87, 214, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 87, 214, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: var(--navy);
   font-family: var(--font-body), var(--font-thai), system-ui, sans-serif;
   line-height: 1.6;
@@ -521,8 +526,8 @@
   gap: 0.35rem;
   height: 1.8rem;
   padding-inline: 0.75rem;
-  background: #f1f1ef;
-  border-bottom: 1px solid #e6e4df;
+  background: #eef1f6;
+  border-bottom: 1px solid #dfe4ec;
 }
 
 .kd-browser-bar span {

@@ -19,7 +19,7 @@ export const maliShowcase: DemoEntry = {
     "Doctor profiles shown as clearly marked placeholders",
   ],
   routes: { th: "/demos/mali-clinic/th", en: "/demos/mali-clinic/en" },
-  palette: ["#f8f4ee", "#344a3c", "#a3573f", "#e3e8df"],
+  palette: ["#fbf2f0", "#344a3c", "#a3573f", "#e3e8df"],
   tryThis: "Tap “Breakouts & acne” in the hero — the treatments and the booking form both update.",
   sector: "Health & beauty",
   status: "Review",

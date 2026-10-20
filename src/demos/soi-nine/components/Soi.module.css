@@ -438,7 +438,7 @@
 .panel {
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  background: #fbf7f0;
+  background: #ffffff;
 }
 
 .panel:focus-visible {
@@ -680,7 +680,7 @@
   position: sticky;
   top: 1.5rem;
   padding: 1rem;
-  background: #fbf7f0;
+  background: #ffffff;
   border: 1px solid var(--line);
 }
 
@@ -731,7 +731,7 @@
 }
 
 .pin circle {
-  fill: #fbf7f0;
+  fill: #ffffff;
   stroke: var(--brass-ink);
   stroke-width: 0.6;
   transition: fill 0.2s ease;

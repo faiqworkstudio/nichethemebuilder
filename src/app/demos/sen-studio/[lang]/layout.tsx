@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f3f0ea",
+  themeColor: "#eceeeb",
 };
 
 export default async function SenRootLayout({

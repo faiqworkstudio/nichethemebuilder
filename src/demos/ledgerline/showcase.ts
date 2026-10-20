@@ -19,7 +19,7 @@ export const ledgerShowcase: DemoEntry = {
     "Footnoted tax facts and a placeholder for the licensed auditor",
   ],
   routes: { th: "/demos/ledgerline/th", en: "/demos/ledgerline/en" },
-  palette: ["#fbfaf7", "#16181d", "#7d2230", "#f1eee7"],
+  palette: ["#e9f1eb", "#16181d", "#7d2230", "#ffffff"],
   tryThis: "Check the ‘Coming up’ box for real filing dates, then move the payroll slider in the fee estimator.",
   sector: "Professional",
   status: "Review",

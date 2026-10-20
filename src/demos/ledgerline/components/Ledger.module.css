@@ -245,7 +245,9 @@
 /* Deadline sidebar */
 .deadlines {
   padding: 1.25rem 1.25rem 1.1rem;
-  background: var(--panel);
+  /* Ruled like a ledger book page. */
+  background-color: var(--panel);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 27px, rgba(40, 96, 64, 0.09) 27px 28px);
   border-top: 3px solid var(--claret);
 }
 

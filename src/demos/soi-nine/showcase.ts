@@ -19,7 +19,7 @@ export const soiShowcase: DemoEntry = {
     "Sample rates labelled; no fake reservation or payment",
   ],
   routes: { th: "/demos/soi-nine/th", en: "/demos/soi-nine/en" },
-  palette: ["#f4efe6", "#2a211c", "#2c5a52", "#d6b27a"],
+  palette: ["#e7efee", "#2a211c", "#2c5a52", "#d6b27a"],
   tryThis: "Pick dates in the planner, open the Loft Suite tab, then hover the journal entries to light up the map.",
   sector: "Hospitality",
   status: "Review",

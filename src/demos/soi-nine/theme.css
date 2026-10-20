@@ -3,18 +3,18 @@
  * Old paper, dark teak and river green, with brass details. Scoped to body.soi.
  */
 .soi {
-  --paper: #f4efe6;
-  --paper-2: #ebe3d5;
+  --paper: #e7efee;
+  --paper-2: #d6e4e2;
   --teak: #2a211c;
   --teak-2: #3a2e27;
   --ink: #241f1b;
   --ink-2: #51473f;
-  --muted: #6c6157;
+  --muted: #5b605c;
   --river: #2c5a52;
   --river-hover: #20463f;
   --brass: #d6b27a;
   --brass-ink: #8a6122;
-  --line: #d8cebf;
+  --line: #c3d4d1;
   --danger: #a3241b;
 
   --font-display: var(--font-soi-display), var(--font-soi-thai-display), Georgia, serif;

@@ -1,6 +1,6 @@
 .card {
   padding: clamp(1.4rem, 3.5vw, 2.5rem);
-  background: #fbf7f0;
+  background: #ffffff;
   border-top: 3px solid var(--river);
 }
 

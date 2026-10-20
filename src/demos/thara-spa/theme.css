@@ -3,17 +3,17 @@
  * Rice-paper cream, cocoa ink, herbal olive and a turmeric accent. Scoped to body.thara.
  */
 .thara {
-  --cream: #f6efe4;
-  --cream-2: #ede3d3;
+  --cream: #eceef5;
+  --cream-2: #dfe2ee;
   --ink: #2e231d;
   --ink-2: #554539;
-  --muted: #6d5d50;
+  --muted: #5f5858;
   --olive: #4f5a2b;
   --olive-hover: #3e4721;
   --olive-ink: #f3edd9;
   --turmeric: #c58a2a;
   --turmeric-ink: #8a5a12;
-  --line: #d9ccb8;
+  --line: #cdd1e0;
   --danger: #a3241b;
 
   --font-display: var(--font-thara-display), "Noto Serif Thai", Georgia, serif;
