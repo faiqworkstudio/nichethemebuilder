@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { studio } from "@/config/studio";
 import { isLocale, locales } from "@/lib/i18n";
-import { krub, pridi } from "@/demos/thara-spa/fonts";
+import { mulish, notoLooped, pridi } from "@/demos/thara-spa/fonts";
 import "@/demos/thara-spa/theme.css";
 
 export const dynamicParams = false;
@@ -24,7 +24,7 @@ export default async function TharaRootLayout({ children, params }: { children: 
   if (!isLocale(lang)) notFound();
   return (
     <html lang={lang}>
-      <body className={`thara ${pridi.variable} ${krub.variable}`}>{children}</body>
+      <body className={`thara ${pridi.variable} ${mulish.variable} ${notoLooped.variable}`}>{children}</body>
     </html>
   );
 }

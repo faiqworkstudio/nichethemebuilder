@@ -19,7 +19,9 @@
   --dark-rule: #4a4640;
   --danger: #a3241b;
 
-  --font-sans: var(--font-plex-thai), "Noto Sans Thai", "Leelawadee UI", Tahoma, system-ui, sans-serif;
+  --font-sans: var(--font-sen-latin), var(--font-plex-thai), "Noto Sans Thai", "Leelawadee UI", Tahoma, system-ui, sans-serif;
+  /* Running text: same Latin face, looped Thai for easier reading. */
+  --font-text: var(--font-sen-latin), var(--font-plex-thai-looped), var(--font-plex-thai), "Noto Sans Thai", Tahoma, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   --gutter: clamp(1rem, 3.2vw, 2.75rem);
@@ -149,4 +151,9 @@ html:has(body.sen) {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* Paragraph-level text uses the looped Thai face; headings keep loopless Plex. Zero specificity so component styles win. */
+:where(.sen) :where(p, li, dd, label, input, select, textarea, td, figcaption, summary) {
+  font-family: var(--font-text);
 }

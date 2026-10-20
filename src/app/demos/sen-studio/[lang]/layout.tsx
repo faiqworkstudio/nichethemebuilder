@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { studio } from "@/config/studio";
 import { isLocale, locales } from "@/lib/i18n";
-import { plexMono, plexThai } from "@/demos/sen-studio/fonts";
+import { instrumentSans, plexMono, plexThai, plexThaiLooped } from "@/demos/sen-studio/fonts";
 import "@/demos/sen-studio/theme.css";
 
 export const dynamicParams = false;
@@ -33,7 +33,7 @@ export default async function SenRootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`sen ${plexThai.variable} ${plexMono.variable}`}>{children}</body>
+      <body className={`sen ${instrumentSans.variable} ${plexThai.variable} ${plexThaiLooped.variable} ${plexMono.variable}`}>{children}</body>
     </html>
   );
 }

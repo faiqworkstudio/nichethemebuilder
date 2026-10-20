@@ -13,7 +13,7 @@
   --line: #d7d7d4;
   --danger: #b0101f;
 
-  --font: var(--font-plot), "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+  --font: var(--font-plot-latin), var(--font-plot), "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
 
   --gutter: clamp(1rem, 3.5vw, 2.75rem);
   --maxw: 1360px;

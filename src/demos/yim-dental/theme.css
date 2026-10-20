@@ -17,8 +17,8 @@
   --danger: #b0261b;
   --radius: 14px;
 
-  --font-display: var(--font-yim-display), "Noto Sans Thai", system-ui, sans-serif;
-  --font-body: var(--font-yim-body), "Noto Sans Thai", system-ui, sans-serif;
+  --font-display: var(--font-yim-latin-display), var(--font-yim-display), "Noto Sans Thai", system-ui, sans-serif;
+  --font-body: var(--font-yim-latin-body), var(--font-yim-body), "Noto Sans Thai", system-ui, sans-serif;
 
   --gutter: clamp(1rem, 4vw, 3rem);
   --maxw: 1240px;

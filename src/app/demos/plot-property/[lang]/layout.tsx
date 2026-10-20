@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { studio } from "@/config/studio";
 import { isLocale, locales } from "@/lib/i18n";
-import { baiJamjuree } from "@/demos/plot-property/fonts";
+import { baiJamjuree, schibsted } from "@/demos/plot-property/fonts";
 import "@/demos/plot-property/theme.css";
 
 export const dynamicParams = false;
@@ -24,7 +24,7 @@ export default async function PlotRootLayout({ children, params }: { children: R
   if (!isLocale(lang)) notFound();
   return (
     <html lang={lang}>
-      <body className={`plot ${baiJamjuree.variable}`}>{children}</body>
+      <body className={`plot ${schibsted.variable} ${baiJamjuree.variable}`}>{children}</body>
     </html>
   );
 }

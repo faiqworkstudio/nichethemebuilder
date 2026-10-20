@@ -119,7 +119,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: -0.02em;
@@ -180,7 +180,7 @@
 }
 
 .kd-hero h1 {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: clamp(2.4rem, 5.2vw, 4.4rem);
   line-height: 1.02;
@@ -371,7 +371,7 @@
 }
 
 .kd-index-no {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 1;
@@ -381,7 +381,7 @@
 
 .kd-index-name {
   margin-top: 0.3rem;
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   line-height: 1.2;
@@ -418,7 +418,7 @@
 .kd-section-head h2,
 .kd-inside h2,
 .kd-together h2 {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: clamp(1.8rem, 3.4vw, 2.75rem);
   line-height: 1.08;
@@ -572,7 +572,7 @@
 }
 
 .kd-big-num {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: 3.2rem;
   line-height: 1;
@@ -593,7 +593,7 @@
 
 .kd-board h3 {
   margin-block: 0.75rem 0.85rem;
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 700;
   font-size: clamp(1.7rem, 2.8vw, 2.4rem);
   letter-spacing: -0.03em;
@@ -805,7 +805,7 @@
 
 .kd-anatomy h3,
 .kd-steps h3 {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), var(--font-thai), sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: -0.01em;

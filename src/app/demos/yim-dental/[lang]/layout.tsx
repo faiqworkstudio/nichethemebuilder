@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { studio } from "@/config/studio";
 import { isLocale, locales } from "@/lib/i18n";
-import { mitr, niramit } from "@/demos/yim-dental/fonts";
+import { mitr, niramit, nunito, nunitoSans } from "@/demos/yim-dental/fonts";
 import "@/demos/yim-dental/theme.css";
 
 export const dynamicParams = false;
@@ -24,7 +24,7 @@ export default async function YimRootLayout({ children, params }: { children: Re
   if (!isLocale(lang)) notFound();
   return (
     <html lang={lang}>
-      <body className={`yim ${mitr.variable} ${niramit.variable}`}>{children}</body>
+      <body className={`yim ${nunito.variable} ${nunitoSans.variable} ${mitr.variable} ${niramit.variable}`}>{children}</body>
     </html>
   );
 }
